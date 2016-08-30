@@ -1,0 +1,74 @@
+/*-----------------  sales slide-in section  -----------------*/
+
+.salesSlideOut__block {
+    @include grid-block;
+    @include grid-align(right);
+}
+
+.salesSlideOut__imageContent {
+    @include grid-content;
+    @include grid-size(shrink);
+    background-color: rgba(255,255,255,.6);
+    padding: 0;
+    
+     @include breakpoint(medium) {
+         padding-top: rem-calc(28);
+     }
+    
+}
+
+.salesSlideOut__infoContent {
+    @include grid-content;
+    @include grid-size(expand);
+    background-color: white;
+    padding: rem-calc(15) rem-calc(35) rem-calc(15) rem-calc(25); 
+    
+    @include breakpoint(medium) {
+        @include grid-size(shrink);
+    }
+}
+.salesSlideOut__salesPic {
+    display:none;
+    padding: rem-calc(10) rem-calc(26) rem-calc(0) rem-calc(26);
+    
+    @include breakpoint(medium) {
+        max-height: rem-calc(200);
+        display:block;
+    }
+    
+    @include breakpoint(large) {
+        display:block;
+    }
+}
+
+.salesSlideOut__header {
+    font-family: 'robotobold';
+    font-size: rem-calc(20);
+    text-transform: uppercase;
+}
+
+.salesSlideOut__name {
+    font-family: 'robotobold';
+    font-size: rem-calc(16);
+    text-transform: uppercase;
+    padding-bottom: rem-calc(12);
+}
+
+.salesSlideOut__number {
+    font-family: 'robotobold';
+    font-size: rem-calc(16);
+    text-transform: uppercase;
+    color: $secondary-color;
+}
+
+.salesSlideOut__email {
+    font-family: 'robotoregular';
+    font-size: rem-calc(16);
+}
+
+.salesSlideOut__viewProfile{
+    font-family: 'robotoregular';
+    font-size: rem-calc(13);
+    text-transform: uppercase;
+}
+/*-----------------  end sales slide-in section  -----------------*/

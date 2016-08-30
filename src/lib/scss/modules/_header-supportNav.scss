@@ -1,0 +1,48 @@
+/*HEADER SUPPORT NAV MODULE (support icon and sales consultant dropdown)*/
+
+.support__button {
+	color: smartscale(#fff, 25%);
+	font-size: rem-calc(25);
+	line-height: rem-calc(25);
+	&:hover,
+	&:focus,
+	&:active {
+		color: #fff;
+	}
+	@include breakpoint(medium) {
+		font-size: rem-calc(32);
+		line-height: rem-calc(32);
+	}
+}
+
+////*Sales*////
+.support__salesButton--mobile {
+	margin-left: rem-calc(18);
+}
+
+.support__salesButton {
+	color: smartscale(#fff, 25%);
+	position: relative;
+	&:hover,
+	&:focus,
+	&:active {
+		color: #fff;
+	}
+	& .dropDown {
+		position: absolute;
+		bottom: rem-calc(0);
+		right: rem-calc(-10);
+	}
+}
+
+img.support__salesConsultant {
+	display: none;
+	@include breakpoint(medium) {
+		display: inline-block;
+		width: 70px;
+		margin-left: -5px;
+	}
+	@include breakpoint(rem-calc(1000)) {
+		width: 85px;
+	}
+}

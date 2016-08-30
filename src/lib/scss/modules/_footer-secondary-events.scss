@@ -1,0 +1,92 @@
+/*SECONDARY FOOTER EVENTS MODULE*/
+
+/*-----------------  event listing section  -----------------*/
+
+.eventsListings {
+	background: #e6e6e6;
+	@include breakpoint(medium) {
+		background-image: url("../img/background-patterns/white-diagonal_transparent.png"), url("../img/background-events.jpg");
+		background-repeat: repeat, no-repeat;
+		background-position: left, center;
+		background-size: auto, cover;
+	}
+	@include breakpoint(large) {
+		background-image: url("../img/background-patterns/white-diagonal_transparent.png"), url("../img/background-events.jpg");
+		background-repeat: repeat, no-repeat;
+		background-position: left, center;
+		background-size: auto, cover;
+	}
+}
+
+.eventsListings__block {
+	@include grid-block;
+	@include grid-wrap(true);
+}
+
+.eventsListings__card {
+	background: rgba(255, 255, 255, 0.7);
+	padding: rem-calc(30) rem-calc(0) rem-calc(10) rem-calc(0);
+	margin-bottom: rem-calc(30);
+	margin-left:auto;
+	margin-right:auto;
+	/*@include breakpoint(641) {
+        min-height: rem-calc(361);
+    }*/
+	@include breakpoint(700) {
+		width:70%;
+	}
+	@include breakpoint(800) {
+		min-height: rem-calc(325);
+	}
+
+	@include breakpoint(800){
+	width:auto;
+	}
+	@include breakpoint(large) {
+		min-height: rem-calc(250);
+	}
+}
+
+.event {
+	@include grid-content;
+	@include grid-size(12);
+	@include breakpoint(rem-calc(800)) {
+		@include grid-size(4);
+	}
+	@include breakpoint(large) {
+		@include grid-size(4);
+	}
+	text-align: center;
+}
+
+.eventsListings__date {
+	font-family: 'roboto_slabbold';
+	font-size: rem-calc(17);
+	padding-top: rem-calc(15);
+	margin-bottom: rem-calc(-6);
+	@include breakpoint(rem-calc(800)) {
+		font-size: rem-calc(19);
+		margin-bottom: rem-calc(-10);
+	}
+}
+
+.eventsListings__eventTitle {
+	text-transform: uppercase;
+	color: $primary-color;
+	font-family: 'robotoblack';
+	margin-bottom: 0; 
+    line-height: 30px;
+}
+
+.eventsListings__eventLocation {
+	font-family: 'roboto_slablight';
+	text-transform: uppercase;
+    line-height: 24px;
+}
+
+.button-events {
+	margin-bottom: rem-calc(40);
+}
+
+
+/*-----------------  end event listing section  -----------------*/

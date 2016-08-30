@@ -1,0 +1,39 @@
+/*Buttons*/
+
+.button-submit {
+    background: $primary-color;
+}
+
+.purple{
+background: $primary-color;
+	&:hover{
+		background: $secondary-color;
+	}
+
+}
+
+.button {margin-right:0;letter-spacing: 0;}
+
+a:hover{color:#000;}
+
+.active{
+	color:#fff;
+}
+
+.button.secondary {
+    background-color: #77758a;
+    color: white;
+
+	&:hover{
+		background-color:smartscale(#77758a, -30%)
+	}
+}
+
+.button.alt {
+	background-color: #888;
+	color: #fff;
+
+	&:hover{
+		background-color:smartscale(#888, -25%)
+	}
+}

@@ -1,0 +1,89 @@
+.manageWishlists {
+    padding: rem-calc(10);
+}
+
+
+
+.manageWishlists__columnLabels {
+    @include grid-block;
+    border-bottom: rem-calc(1) dotted #c7c7c7;
+    text-transform: uppercase;
+    p {
+        margin-bottom: rem-calc(6);
+        font-size: rem-calc(12);
+    } 
+}
+
+.manageWishlists__wishlistText {
+    @include grid-content(6);
+    color: #757575;
+    padding: 0;
+}
+
+.manageWishlists__defaultListText {
+    @include grid-content(3);
+    color: #757575;
+    text-align: center;
+}
+
+.manageWishlists__deleteText {
+    @include grid-content(3);
+    color: #757575;
+    text-align: center;
+}
+
+.manageWishlists__wishlistBody {
+    @include grid-block;
+    @include grid-orient(vertical);
+}
+
+.manageWishlists__wishlistRow {
+    @include grid-block;
+    padding-top: rem-calc(4);
+    border-bottom: rem-calc(1) dotted #c7c7c7;
+}
+
+.manageWishlists__wishlistRow:last-child {
+    border-bottom: rem-calc(1) solid #c7c7c7;
+}
+
+.manageWishlists__title {
+    @include grid-content(6);
+    padding: 0;
+    
+    & input {
+        margin-bottom: rem-calc(12);
+    }
+    
+    & input[type="text"] {
+        font-family: 'robotoblack';
+        font-size: rem-calc(16);
+        input-color: black; 
+    }
+}
+
+.manageWishlists__radioButton {
+    @include grid-content(3);
+    text-align: center;
+    padding-top: rem-calc(19);
+}
+
+.manageWishlists__checkBox {
+    @include grid-content(3);
+    text-align: center;
+    padding-top: rem-calc(19);
+}
+
+.button__wishlist--create {
+    background-color: #e6e4ea;
+    color: $primary-color;
+    margin-top: rem-calc(20);
+}
+
+.button__wishlist--save {
+    font-family: 'robotoblack';
+    float: right;
+    background-color: $primary-color;
+    color: white;
+    margin-top: rem-calc(14);
+}

@@ -1,0 +1,67 @@
+// styles for the Top 50 page
+.top50__rankNumber {
+	position: absolute;
+	left: rem-calc(8);
+	top: rem-calc(-22);
+	background-color: #5a4099;
+	width: rem-calc(50);
+	height: rem-calc(50);
+	text-align: center;
+	border-radius: rem-calc(100);
+	border: 2px solid #fff;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8e71d5+0,5a4099+71 */
+	background: rgb(142, 113, 213);
+	/* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, rgba(142, 113, 213, 1) 0%, rgba(90, 64, 153, 1) 71%);
+	/* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(142, 113, 213, 1) 0%, rgba(90, 64, 153, 1) 71%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center, rgba(142, 113, 213, 1) 0%, rgba(90, 64, 153, 1) 71%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	-webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.75);
+	
+	@include breakpoint(750) {
+		width: rem-calc(60);
+		height: rem-calc(60);
+		border: 3px solid #fff;
+	}
+	
+	@include breakpoint(1450) {
+		left: rem-calc(-40);
+		top: rem-calc(-22);
+		width: rem-calc(70);
+		height: rem-calc(70);
+	}
+	& p {
+		font-family: 'robotoblack';
+		font-size: rem-calc(24);
+		line-height: rem-calc(44);
+		color: white;
+		padding: rem-calc(0) rem-calc(6) rem-calc(0) rem-calc(6);
+		margin: 0;
+		text-shadow: 1px 1px 0px rgba(73, 49, 130, 1);
+		
+		@include breakpoint(750) {
+			font-size: rem-calc(29);
+			line-height: rem-calc(52);
+		}
+		@include breakpoint(1450) {
+			font-size: rem-calc(32);
+			line-height: rem-calc(64);
+		}
+	}
+}
+
+.top50__select {
+	@include grid-content(12);
+	@include breakpoint(medium) {
+		@include grid-content(4);
+		margin-top: rem-calc(3);
+	}
+	@include breakpoint(large) {
+		@include grid-content(4);
+		margin-top: rem-calc(8);
+	}
+}

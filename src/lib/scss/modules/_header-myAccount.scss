@@ -1,0 +1,154 @@
+/////*My Account Module: SignedIn*/////
+.myAccount__welcome,
+.myAccount__name,
+.myAccount__welcome--mobile,
+.myAccount__name--mobile {
+	font-size: rem-calc(11);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.myAccount__welcome--mobile,
+.myAccount__name--mobile {
+	color: $secondary-color;
+	margin-bottom: rem-calc(10);
+	@include breakpoint(rem-calc(1000)) {
+		display: none;
+	}
+}
+
+.myAccount__welcome {
+	display: none;
+	@include breakpoint(rem-calc(1000)) {
+		display: block;
+		font-family: 'robotoblack', helvetica, arial, sans-serif;
+		margin-bottom: rem-calc(0);
+		& .myAccount__name {
+			font-family: 'roboto_slablight', georgia, serif;
+			color: #fff;
+		}
+	}
+}
+
+.myAccount__accountButton,
+.support__salesButton--mobile {
+	font-size: rem-calc(25);
+	line-height: rem-calc(25);
+}
+
+.myAccount__accountButton,
+.myAccount__wishlistButton,
+.myAccount__shippingButton,
+.support__salesButton--mobile {
+	color: smartscale(#fff, 25%);
+	&:hover,
+	&:focus,
+	&:active {
+		color: #fff;
+	}
+}
+
+.myAccount__accountButton,
+.myAccount__wishlistButton,
+.myAccount__shippingButton {
+	@include breakpoint(medium) {
+		font-size: rem-calc(32);
+		display: inline-block;
+	}
+}
+
+.myAccount__accountButton,
+.myAccount__wishlistButton {
+	@include breakpoint(medium) {
+		margin-right: rem-calc(15);
+	}
+}
+
+.myAccount__wishlistButton,
+.myAccount__shippingButton {
+	display: none;
+	@include breakpoint(medium) {
+		display: inline-block;
+	}
+}
+
+.myAccount__cartButton {
+	color: smartscale(#fff, 30%);
+	&:hover,
+	&:focus,
+	&:active {
+		color: #fff;
+	}
+	font-size: rem-calc(25);
+	margin-left: rem-calc(15);
+	@include breakpoint(medium) {
+		font-size: rem-calc(35);
+		margin-left: rem-calc(15);
+	}
+}
+
+.myAccount__cartItems {
+	padding-left: rem-calc(6);
+	font-size: rem-calc(18);
+	@include breakpoint(medium) {
+		font-size: rem-calc(25);
+	}
+}
+
+/////*My Account Module: Signed Out*/////
+.myAccount__signIn,
+.myAccount__register {
+	color: smartscale(#fff, 25%);
+	text-transform: uppercase;
+	font-family: 'robotoregular', helvetica, arial, san-serif;
+	&:hover,
+	&:focus,
+	&:active {
+		color: #fff;
+	}
+	@include breakpoint(1000) {
+		font-family: 'robotoregular', helvetica, arial, san-serif;
+	}
+}
+
+.myAccount__signIn {
+	margin-right: rem-calc(7);
+}
+
+.myAccount__register {
+	margin-left: rem-calc(7);
+}
+
+.myAccount__signIn,
+.myAccount__register {
+	font-size: rem-calc(13);
+	line-height: rem-calc(24);
+	@include breakpoint(medium) {
+		font-size: rem-calc(15);
+		margin-top: rem-calc(8);
+		margin-bottom: rem-calc(10);
+		display: inline-block;
+		&:before {
+			font-family: 'europa-sports';
+			speak: none;
+			margin-right: rem-calc(4);
+		}
+	}
+	@include breakpoint(1000) {
+		margin-top: rem-calc(0);
+		margin-bottom: rem-calc(0);
+	}
+}
+
+@include breakpoint(medium) {
+	.myAccount__signIn {
+		&:before {
+			content: "\e638";
+		}
+	}
+	.myAccount__register {
+		&:before {
+			content: "\e619";
+		}
+	}
+}

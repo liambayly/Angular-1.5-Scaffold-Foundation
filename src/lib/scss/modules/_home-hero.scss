@@ -1,0 +1,288 @@
+//////*Home Page Hero*//////
+
+section.homeHero {
+	padding-top: rem-calc(30)!important;
+		@include breakpoint(rem-calc(640)){
+			padding-top: rem-calc(45)!important;}
+}
+/*GRID BLOCK*/
+.homeHero__block {
+	@include grid-block;
+	overflow-y: visible;
+	@include grid-wrap(true);
+}
+/*GRID CONTENT*/
+.homeHero__content {
+	@include grid-content;
+}
+
+////*Carousel Module*////
+ .slick-slide,
+.slick-slide img {
+	outline: none;
+}
+.slick-prev {
+	left: rem-calc(0);
+}
+.slick-next {
+	right: 0;
+}
+.slick-prev,
+.slick-next {
+	display: none;
+	width: rem-calc(60);
+	height: rem-calc(60);
+	z-index: 99999999;
+	@include breakpoint(rem-calc(1460)) {
+		display: inline-block;
+	}
+}
+.slick-prev:before,
+.slick-next:before {
+	font-family: 'europa-sports';
+	font-size: rem-calc(40);
+	line-height: 1;
+	opacity: .9;
+	color: $secondary-color;
+}
+.slick-prev:before {
+	content: '\e634';
+}
+.slick-next:before {
+	content: '\e632';
+}
+ul.slick-dots {
+	margin-left: 0;
+}
+.slick-dots {
+	bottom: -55px;
+}
+.slick-dots li button:before {
+	font-size: 10px;
+	@include breakpoint(640) {
+		font-size: 20px;
+	}
+}
+////*Signed Out Message*////
+
+/*GRID BLOCK*/
+.tagLine {
+	@include grid-block;
+	@include grid-size(12);
+	@include breakpoint(rem-calc(900)) {
+		@include grid-size(6);
+	}
+}
+.tagLine--h1 {
+	font-family: 'robotoblack', Helvetica, Arial, san-serif;
+	text-transform: uppercase;
+	font-size: rem-calc(30);
+	line-height: rem-calc(34);
+	color: #bfbcc5;
+	text-align: center;
+	margin: rem-calc(0) auto rem-calc(30) auto;
+	width: 90%;
+	@include breakpoint(medium) {
+		font-size: rem-calc(36);
+		line-height: rem-calc(40);
+	}
+	@include breakpoint(900) {
+		text-align: left;
+		font-size: rem-calc(26);
+		line-height: rem-calc(30);
+		margin: rem-calc(0) rem-calc(0) rem-calc(0) rem-calc(15);
+		width: auto;
+	}
+	@include breakpoint(1200) {
+		font-size: rem-calc(35);
+		line-height: rem-calc(35);
+	}
+}
+.tagLine--dark {
+	color: smartscale(#bfbcc5, 25%);
+}
+////*Store Nav Links*////
+/*GRID BLOCK*/
+.storeNav {
+	@include grid-block;
+	@include grid-size(12);
+	@include grid-layout(2);
+	margin-bottom: rem-calc(20);
+	@include breakpoint(medium) {
+		@include grid-layout(3);
+	}
+	@include breakpoint(rem-calc(800)) {}@include breakpoint(rem-calc(900)) {
+		@include grid-size(6);
+		@include grid-layout(2);
+		margin-bottom: 0;
+	}
+	@include breakpoint(rem-calc(1100)) {
+		@include grid-layout(3);
+	}
+}
+.storeNav__links {
+	text-transform: uppercase;
+	font: rem-calc(14)'robotoblack', Helvetica, Arial, san-serif;
+	color: $primary-color;
+	@include grid-content;
+	& a {
+		&:before {
+			content: "\e607";
+			font-family: 'europa-sports';
+			speak: none;
+			font-size: rem-calc(12);
+			margin-right: rem-calc(5);
+		}
+	}
+	@include breakpoint(medium) {
+		font-size: rem-calc(16)
+	}
+	@include breakpoint(rem-calc(800)) {
+		font-size: rem-calc(14)
+	}
+}
+////*Search Filters*////
+
+/*GRID BLOCK*/
+.searchFilters {
+	margin-bottom: rem-calc(28);
+	@include breakpoint(rem-calc(760)) {
+		margin-bottom: rem-calc(35);
+	}
+	clear: both;
+	@include grid-block;
+	@include grid-wrap(true);
+}
+
+/*GRID CONTENT*/
+.searchFilters__dropDown {
+	@include grid-content(12);
+	padding: 0;
+	&:nth-child(1) {
+		margin-bottom: rem-calc(15);
+	}
+	@include breakpoint(rem-calc(760)) {
+		@include grid-content(6);
+		&:nth-child(1) {
+			padding-left: 0;
+			margin-bottom: rem-calc(0);
+			margin-right: rem-calc(0);
+		}
+		&:nth-child(2) {
+			padding-right: 0;
+		}
+	}
+}
+.searchFilters__buttons {
+	text-transform: uppercase;
+	font-size: rem-calc(14);
+	background-color: rgba(255, 255, 255, 1);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	padding: rem-calc(12) rem-calc(12);
+	display: block;
+	border: 1px solid #e5e4eb;
+	color: $secondary-color;
+	position: relative;
+	@include breakpoint(medium) {
+		padding: rem-calc(15) rem-calc(12);
+	}
+	&:after {
+		content: "\e607";
+		font-family: 'europa-sports';
+		speak: none;
+		font-size: rem-calc(16);
+		position: absolute;
+		right: rem-calc(10);
+	}
+	&:hover {
+		background-color: rgba(255, 255, 255, .7);
+		color: $primary-color;
+	}
+}
+////*Shop for Brands/Categories Filter Search*////
+#shopBrand,
+#shopCategory {
+	&.panel-top {
+		height: 100%;
+		z-index: 999999999999999999999999999;
+	}
+}
+
+////*Spotlight Sponsor Carousel*////
+
+/*GRID CONTENT*/
+.spotLight {
+	@include grid-content;
+	width: 94%;
+	margin-left: auto;
+	margin-right: auto;
+	@include breakpoint(rem-calc(1000)) {
+		@include grid-size(6);
+	}
+}
+////*Big E Module*////
+
+/*GRID BLOCK*/
+.bigE {
+	@include grid-block;
+	@include grid-size(12);
+	margin-top: rem-calc(30);
+	@include breakpoint(rem-calc(800)) {
+		@include grid-align(center);
+	}
+	@include breakpoint(rem-calc(1000)) {
+		@include grid-size(6);
+		@include grid-align(left);
+	}
+	@include breakpoint(large) {
+
+	}
+}
+
+/*GRID CONTENT*/
+.bigE__image {
+	@include grid-content;
+	@include grid-size(5);
+	@include breakpoint(rem-calc(800)) {
+		@include grid-size(4);
+	}
+	@include breakpoint(large) {
+		@include grid-size(4);
+	}
+	width:rem-calc(136);
+	margin-top:rem-calc(15);
+}
+
+/*GRID CONTENT*/
+.bigE__info {
+	@include grid-content;
+	@include grid-size(7);
+	margin-top: rem-calc(65);
+	& ul li p {
+		font-family: roboto_slablight, georgia, serif;
+		font-size: .9rem;
+		line-height: 1.4;
+		margin-bottom: rem-calc(10);
+	}
+	@include breakpoint(rem-calc(800)) {
+		@include grid-size(5);
+	}
+	@include breakpoint(rem-calc(1000)) {
+		@include grid-size(7);
+	}
+	@include breakpoint(large) {
+		@include grid-size(8);
+	}
+}
+.bigE__product {
+	width: rem-calc(160);
+	margin-top: rem-calc(30);
+	background-color: #fff;
+	padding: rem-calc(8);
+	border-radius: 160px 160px 160px 160px;
+	-moz-border-radius: 160px 160px 160px 160px;
+	-webkit-border-radius: 160px 160px 160px 160px;
+	border: 0px solid #000000;
+}

@@ -1,0 +1,137 @@
+////*Marketing Module: About Us*////
+.section.marketing {
+	padding-bottom: 0;
+}
+.marketing {
+	& .slick-prev, .slick-next {
+		top: 0;
+		@include breakpoint(medium) {
+			display: none !important;
+		}
+		@include breakpoint(rem-calc(800)) {
+			display: block !important;
+			top: 50%;
+		}
+	}
+	& .slick-prev:before,
+	.slick-next:before {
+		font-size: rem-calc(24);
+		color: #fff;
+		@include breakpoint(rem-calc(800)) {
+			font-size: rem-calc(42);
+		}
+	}
+}
+.marketing__carousel {
+	//& img {
+	//display:none;
+	//@include breakpoint(medium){
+	//display:block;
+	//position: absolute;
+	//top: 0;
+	///right: 10%;
+	//	}
+	& .slick-dots li button:before {
+		color: #fff;
+	}
+}
+.marketing__about {
+	@include grid-block;
+	@include grid-wrap(true);
+	& h2.sectionTitle--white {
+		text-shadow: 1px 1px 1px #333;
+	}
+	& h3.sectionSubtitle--lite {
+		text-shadow: 1px 1px 1px #333;
+		color: #aeaeae;
+		width: 100%;
+		margin-bottom: rem-calc(15);
+		@include breakpoint(medium) {
+			width: 75%;
+		}
+		@include breakpoint(rem-calc(1000)) {
+			width: 50%;
+		}
+	}
+}
+.marketing__content {
+	@include grid-content;
+	text-align: center;
+	@include breakpoint(rem-calc(800)) {
+		@include grid-offset(1);
+	}
+	@include breakpoint(medium) {
+		text-align: left;
+	}
+}
+.marketing__desc {
+	text-shadow: 0 1px 1px #333;
+	color: #aeaeae;
+	width: 100%;
+	margin-bottom: rem-calc(25);
+	@include breakpoint(medium) {
+		width: 75%;
+	}
+	@include breakpoint(rem-calc(1000)) {
+		width: 50%;
+	}
+}
+.marketing__about.about,
+.marketing__about.game-on,
+.marketing__about.speed,
+.marketing__about.agility,
+.marketing__about.energy,
+.marketing__about.endurance,
+.marketing__about.power {
+	@include breakpoint(medium) {
+		min-height: 27.5rem;
+	}
+	@include breakpoint(rem-calc(1000)) {
+		min-height: 37.5rem;
+	}
+}
+.marketing__about.about {
+	@include breakpoint(medium) {
+		background: url('../img/home-marketing/hands-color.jpg') no-repeat right bottom;
+		background-size: contain;
+		& .marketing__desc {
+			width: 50%;
+		}
+	}
+}
+.marketing__about.game-on {
+	@include breakpoint(medium) {
+		background: url('../img/home-marketing/game-on-color.jpg') no-repeat right bottom;
+		background-size: contain;
+	}
+}
+.marketing__about.speed {
+	@include breakpoint(medium) {
+		background: url('../img/home-marketing/speed-color.jpg') no-repeat right bottom;
+		background-size: contain;
+	}
+}
+.marketing__about.agility {
+	@include breakpoint(medium) {
+		background: url('../img/home-marketing/agility-color.jpg') no-repeat right bottom;
+		background-size: contain;
+	}
+}
+.marketing__about.energy {
+	@include breakpoint(medium) {
+		background: url('../img/home-marketing/energy-color.jpg') no-repeat right bottom;
+		background-size: contain;
+	}
+}
+.marketing__about.endurance {
+	@include breakpoint(medium) {
+		background: url('../img/home-marketing/endurance-color.jpg') no-repeat right bottom;
+		background-size: contain;
+	}
+}
+.marketing__about.power {
+	@include breakpoint(medium) {
+		background: url('../img/home-marketing/power-color.jpg') no-repeat right bottom;
+		background-size: contain;
+	}
+}

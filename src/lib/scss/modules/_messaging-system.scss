@@ -1,0 +1,110 @@
+////*ALL SYSTEM MESSAGING STYLES*////
+
+// NOTIFICATION MESSAGING //
+.message__error, .message__maintenance, .message__system {
+    
+    @include grid-container;
+    max-width: rem-calc(900);
+    font-family: 'robotoregular', helvetica, arial, sans-serif;
+    text-align: center;
+    font-size: rem-calc(22);
+    line-height: rem-calc(26);
+    margin-bottom: rem-calc(30);
+    z-index: 9999999999;
+}
+
+.message__error {
+    background-color: #F04124;
+}
+
+.message__outer {
+    @include grid-block;
+    @include grid-wrap(true);
+    overflow: visible;
+    padding: rem-calc(15) rem-calc(0) rem-calc(20) rem-calc(0);
+    
+    @include breakpoint(medium) {
+        padding: rem-calc(5) rem-calc(0) rem-calc(5) rem-calc(0);
+    }
+}
+
+.message__maintenance {
+    @include grid-content;
+    padding: rem-calc(25) rem-calc(3) rem-calc(10) rem-calc(3);
+    overflow: visible;
+    @include breakpoint(medium) {
+        padding: rem-calc(25) rem-calc(40) rem-calc(15) rem-calc(40);
+        overflow: visible;
+    }
+}
+
+.message__icon {
+    @include grid-content(12);
+    overflow: visible;
+    
+    @include breakpoint(medium) {
+        @include grid-content(1);
+        overflow: visible;
+        max-width: 4.33333%;
+    }
+    
+    @include breakpoint(large) {
+        @include grid-content(1);
+        overflow: visible;
+    }
+}
+
+.message__text {
+    @include grid-content(12);
+    overflow: visible;
+    padding-top: rem-calc(8);
+    
+    @include breakpoint(medium) {
+        @include grid-content(11);
+        overflow: visible;
+    }
+    
+    @include breakpoint(large) {
+        text-align: left;
+    }
+}
+
+.message__maintenance {
+    background-color: #fd8d01; 
+}
+
+.message__system {
+    background-color: $primary-color; 
+}
+
+.icon-info-circle--message {
+    font-size: rem-calc(40);
+    
+    @include breakpoint(medium) {
+       font-size: rem-calc(26); 
+    }
+}
+
+.ngn-dismiss {
+    font-family: 'robotoregular', helvetica, arial, sans-serif; 
+    font-size: rem-calc(46);
+    //line-height: rem-calc(26);
+    color: rgba (255, 255, 255, .9);
+    background-color: transparent;
+    opacity: .7;
+    position: absolute;
+    right: rem-calc(30);
+    height: rem-calc(30);
+    width: rem-calc(30);
+    border-radius: 15px;
+    text-shadow: none;
+    box-shadow: none;
+    z-index: 9999999999999;
+    
+    &:hover {
+        background-color: transparent;
+        color: rgba (255, 255, 255, .1);
+        opacity: 1;
+    }
+}
+

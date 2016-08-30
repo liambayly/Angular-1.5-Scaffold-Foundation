@@ -1,0 +1,70 @@
+/*SECONDARY FOOTER BLOG MODULE*/
+
+/*-----------------  blog section  -----------------*/
+
+.blogSection {}
+
+.blogSection__h2 {
+	@include grid-content;
+}
+
+.blog__block {
+	@include grid-block;
+	@include grid-wrap(true);
+}
+
+.blog__content {
+	@include grid-content;
+	@include breakpoint(small) {
+		@include grid-size(12);
+	}
+	@include breakpoint(medium) {
+		@include grid-size(4);
+	}
+	@include breakpoint(large) {
+		@include grid-size(4);
+	}
+}
+
+.blogSection__card {
+	margin-bottom: .5rem;
+	color: #000;
+	overflow: hidden;
+	@include breakpoint(small) {
+		margin-bottom: 2.5rem;
+	}
+}
+
+.blogSection__cardSection {
+	padding-top: rem-calc(10);
+}
+
+.blogSection__cardDivider {
+	color: #fff;
+	background: #000;
+	padding: rem-calc(10);
+	font-family: 'roboto_slabbold';
+	font-size: rem-calc(12);
+	display: inline-block;
+}
+
+.blogSection__cardDivider--author {
+	font-family: 'roboto_slablight'!important;
+}
+
+.blogSection__title {
+	font-family: 'robotoblack';
+	color: $primary-color;
+	font-size: rem-calc(21);
+}
+
+.blogSection__body {
+	font-family: 'roboto_slablight'!important;
+}
+
+.button-blogSection {
+	margin-bottom: rem-calc(40);
+}
+
+
+/*-----------------  end blog listing section  -----------------*/

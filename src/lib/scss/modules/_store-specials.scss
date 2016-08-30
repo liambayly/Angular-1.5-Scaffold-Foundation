@@ -1,0 +1,15 @@
+.specials {}
+
+.specials .brandButton,
+.brands__newProducts .brandButton{
+    max-width: rem-calc(600);
+    @include breakpoint(medium) {
+        max-width: 25%;
+    }    
+}
+
+.specials .content__h6 {
+    @include breakpoint(medium) {
+        font-size: rem-calc(18);
+    }
+}

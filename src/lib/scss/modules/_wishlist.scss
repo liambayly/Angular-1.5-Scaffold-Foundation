@@ -1,0 +1,682 @@
+
+
+.wishlist__itemsTitle {
+    font-family: 'robotoblack', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	font-size: rem-calc(16);
+    @include grid-content(12);
+	text-align: center;
+	color: #414141;
+    padding:rem-calc(9) rem-calc(0) rem-calc(3) rem-calc(0);
+    overflow:visible;
+	@include breakpoint(medium) {
+		font-size: rem-calc(18);
+		line-height: rem-calc(18);
+        text-align: left;
+        padding:rem-calc(9) rem-calc(0) rem-calc(0) rem-calc(0);
+	}
+}
+
+.wishlistCart__image {
+    text-align: center;
+	padding-left:rem-calc(16);
+}
+
+.wishlist__added {
+    font-size: rem-calc(11);
+    line-height: rem-calc(13);
+    text-transform: uppercase;
+    margin-top: rem-calc(-10);
+}
+
+.button__cart {
+    width: 100% !important;
+    
+    @include breakpoint(600) {
+        margin-bottom: rem-calc(0);
+        margin-top: rem-calc(-10)!important; 
+    }
+    @include breakpoint(large) {
+        margin-bottom: rem-calc(0);
+        margin-top: rem-calc(-30)!important; 
+    }
+}
+
+.button__addAllContentBlock {
+    @include grid-content;
+    padding-top: rem-calc(20);
+    border-top: 1px solid #c7c7c7;
+}
+
+.button__addAll {
+    float:right;
+	}
+
+#cart__chooseWishlist .productDrops__drop {
+    margin-right: rem-calc(10);
+    margin-bottom: rem-calc(10);
+    
+    @include breakpoint(medium) {
+        margin-bottom: rem-calc(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////
+
+
+
+.cart__h2 {
+	@include grid-content;
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	font-size: rem-calc(24);
+	line-height: rem-calc(40);
+	border-bottom: 1px solid #c7c7c7;
+	text-transform: uppercase;
+	text-align: center;
+	@include breakpoint (760) {
+		text-align: left;
+		font-size: rem-calc(28);
+		line-height: rem-calc(52);
+	}
+	@include breakpoint (large) {
+		font-size: rem-calc(36);
+		line-height: rem-calc(60);
+		margin-bottom: rem-calc(12);
+	}
+}
+
+////*Cart Header: Items Tally and Clear All Button and Move Cart to Wishlist*////
+.cart__header {
+	@include grid-block(12);
+	@include grid-wrap(true);
+	padding-bottom: rem-calc(12);
+	@include breakpoint(760) {
+		border-bottom: 1px solid #c7c7c7;
+	}
+}
+
+.cart__headerItems {
+	@include grid-content(12);
+	text-align: center;
+	@include breakpoint(medium) {
+		@include grid-content(4);
+	}
+	@include breakpoint(760) {
+		text-align: left;
+	}
+}
+
+.cart__itemsNumber,
+.cart__itemsTitle {
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+}
+
+.cart__itemsNumber {
+	font-size: rem-calc(16);
+	line-height: rem-calc(16);
+	@include breakpoint(medium) {
+		font-size: rem-calc(30);
+		line-height: rem-calc(30);
+	}
+}
+
+.cart__itemsTitle {
+	font-size: rem-calc(12);
+	color: #414141;
+	@include breakpoint(medium) {
+		font-size: rem-calc(18);
+		line-height: rem-calc(18);
+	}
+}
+
+.cart__control {
+	@include grid-content(12);
+	text-align: center;
+	margin-top: rem-calc(10);
+	@include breakpoint(medium) {
+		@include grid-content(8);
+
+		text-align: right;
+		margin-top: rem-calc(0);
+	}
+	& .productDrops__drop {
+		width: auto;
+		padding-right: rem-calc(30);
+		line-height: rem-calc(14);
+		@include breakpoint(medium) {
+			padding-right: rem-calc(50);
+			line-height: rem-calc(19);
+		}
+	}
+	& .button {
+		margin-bottom: 0;
+		line-height: rem-calc(7);
+		@include breakpoint(medium) {
+			line-height: rem-calc(11);
+		}
+	}
+}
+
+////*Cart Headings*////
+.cart__headings {
+	display: none;
+	@include breakpoint(760) {
+		@include clearfix;
+		width: 100%;
+		padding: rem-calc(20) 0 rem-calc(20) rem-calc(16);
+		display: inline-block;
+	}
+}
+
+.cart__headingsInfo,
+.cart__headingsQty,
+.cart__headingsPrices {
+	@include breakpoint(760) {
+		font-family: 'roboto_slablight', georgia, serif;
+		text-transform: uppercase;
+		font-size: rem-calc(11);
+		color: #676767;
+		float: left;
+	}
+}
+.cart__headingsQty--line{
+	@include breakpoint(900) {
+		display:none;
+	}
+}
+
+.cart__headingsInfo {
+	@include breakpoint(760) {
+		width: 47%
+	}
+	@include breakpoint(900) {
+		width: 44%
+	}
+	@include breakpoint(1200) {
+		width: 50%
+	}
+}
+
+.cart__headingsQty {
+	@include breakpoint(760) {
+		width: 8.5%;
+	}
+	@include breakpoint(900) {
+		width: 19%;
+	}
+	@include breakpoint(1200) {
+		width: 18%;
+	}
+}
+
+.cart__headingsPrices {
+	@include breakpoint(760) {
+		width: 30%
+	}
+}
+
+////*Cart Item*////
+.cart__name,
+.cart__unit,
+.cart__qty,
+.cart__price,
+.cart__actions,
+.cart__special {
+	padding-left: rem-calc(16);
+	padding-right: rem-calc(16);
+}
+
+.cart__item {
+	width: 100%;
+	@include clearfix;
+	padding-top: rem-calc(45);
+	padding-bottom: rem-calc(45);
+	border-top: 1px dashed #c7c7c7;
+	background: rgba(244, 244, 244, 1);
+	background: -moz-linear-gradient(top, rgba(244, 244, 244, 1) 0%, rgba(254, 254, 254, 0.51) 21%, rgba(254, 254, 254, 0) 43%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(244, 244, 244, 1)), color-stop(21%, rgba(254, 254, 254, 0.51)), color-stop(43%, rgba(254, 254, 254, 0)));
+	background: -webkit-linear-gradient(top, rgba(244, 244, 244, 1) 0%, rgba(254, 254, 254, 0.51) 21%, rgba(254, 254, 254, 0) 43%);
+	background: -o-linear-gradient(top, rgba(244, 244, 244, 1) 0%, rgba(254, 254, 254, 0.51) 21%, rgba(254, 254, 254, 0) 43%);
+	background: -ms-linear-gradient(top, rgba(244, 244, 244, 1) 0%, rgba(254, 254, 254, 0.51) 21%, rgba(254, 254, 254, 0) 43%);
+	background: linear-gradient(to bottom, rgba(244, 244, 244, 1) 0%, rgba(254, 254, 254, 0.51) 21%, rgba(254, 254, 254, 0) 43%);
+	//filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#fefefe', GradientType=0);
+	& .product__specify,
+	.product__option {
+		display: inline-block;
+		margin-bottom: rem-calc(2);
+		@include breakpoint(1200) {
+			display: block;
+		}
+	}
+	& .product__specify {
+		margin-top: 0;
+		@include breakpoint(1200) {
+			margin-top: rem-calc(16);
+		}
+	}
+}
+
+.cart__image {
+	width: 25%;
+	float: left;
+	overflow: visible;
+	@include breakpoint(600) {
+		width: 10%;
+	}
+	@include breakpoint(800) {
+		width: 15%;
+	}
+	@include breakpoint(900) {
+		width: 13%;
+	}
+	@include breakpoint(1200) {
+		width: 8%;
+	}
+}
+
+.cart__info {
+	width: 75%;
+	float: left;
+	overflow: visible;
+	@include breakpoint(600) {
+		width: 90%;
+	}
+	@include breakpoint(800) {
+		width: 85%;
+	}
+	@include breakpoint(900) {
+		width: 87%;
+	}
+	@include breakpoint(1200) {
+		width: 92%;
+	}
+}
+
+.cart__middle {
+	@include clearfix;
+	@include breakpoint(600) {
+		width: 35%;
+		float: left;
+		margin-bottom: rem-calc(16);
+	}
+	@include breakpoint(675) {
+		width: 40%;
+	}
+	@include breakpoint(900) {
+		width: 35%;
+	}
+	@include breakpoint(1200) {
+		width: 45%;
+	}
+}
+
+.cart__name {
+	overflow: visible;
+	@include breakpoint(1200) {
+		width: 60%;
+		float: left;
+	}
+	& .product__item {
+		margin-bottom: rem-calc(5);
+	}
+	& .product__specify {
+		margin-top: rem-calc(10);
+	}
+}
+
+.cart__unit {
+	overflow: visible;
+	@include clearfix;
+	@include breakpoint(1200) {
+		width: 40%;
+		float: left;
+		margin-top: rem-calc(6);
+	}
+}
+
+.cart__tail {
+	@include clearfix;
+	@include breakpoint(600) {
+		width: 35%;
+		float: left;
+		margin-top: rem-calc(12);
+	}
+	@include breakpoint(675) {
+		width: 30%;
+	}
+	@include breakpoint(900) {
+		width: 45%;
+	}
+	@include breakpoint(1200) {
+		width: 40%;
+	}
+}
+
+.cart__qty {
+	overflow: visible;
+	margin-top: rem-calc(12);
+	@include breakpoint(480) {
+		width: 50%;
+		float: left;
+	}
+	@include breakpoint(600) {
+		width: 100%;
+	}
+	@include breakpoint(900) {
+		width: 48%;
+	}
+	& input {
+		width: rem-calc(50);
+		margin-right: rem-calc(10);
+		display: inline-block;
+		text-align: center;
+	}
+	& .button {
+		display: inline-block;
+		font-size: rem-calc(11);
+		line-height: rem-calc(19);
+	}
+}
+
+.cart__price {
+	overflow: visible;
+	@include breakpoint(480) {
+		width: 50%;
+		float: left;
+		margin-top: rem-calc(12);
+	}
+	@include breakpoint(600) {
+		width: 100%;
+		margin-top: rem-calc(12);
+	}
+	@include breakpoint(900) {
+		width: 50%;
+	}
+	@include breakpoint(1200) {
+		width: 41%;
+	}
+}
+
+.cart__actions {
+	@include clearfix;
+	overflow: visible;
+	margin-top: rem-calc(6);
+	@include breakpoint(480) {}
+	@include breakpoint(600) {
+		width: 30%;
+		float: left;
+	}
+	@include breakpoint(900) {
+		width: 20%;
+	}
+	@include breakpoint(1200) {
+		width: 15%;
+	}
+	& .productDrops__drop {
+		width: 100%;
+		padding-right: rem-calc(50);
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: rem-calc(16);
+		line-height: rem-calc(19);
+		@include breakpoint(480) {
+			width: 47%;
+			float: left;
+			padding-right: rem-calc(20);
+		}
+		@include breakpoint(600) {
+			width: 100%;
+		}
+		@include breakpoint(1200) {}
+	}
+	& .button {
+		width: 100%;
+		@include breakpoint(480) {
+			width: 47%;
+			float: left;
+			margin-right: rem-calc(16);
+		}
+		@include breakpoint(600) {
+			width: 100%;
+			margin-top: rem-calc(18);
+		}
+		@include breakpoint(1200) {}
+	}
+	& .action-sheet-container {
+		display: block;
+	}
+}
+
+.cart__special {
+	clear: both;
+	@include breakpoint(600) {
+		margin-top: rem-calc(16);
+	}
+}
+
+.cart__specialItem {
+	background-color: #f1f8f1;
+	padding: rem-calc(8);
+}
+
+.cart__specialText {
+	margin-bottom: 0;
+	margin-top: 0;
+	font-family: 'robotoregular', georgia, serif;
+	font-size: rem-calc(12);
+	line-height: rem-calc(18);
+}
+
+.cart__specialTitle {
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	font-size: rem-calc(14);
+	color: #048507;
+}
+
+.cart__wrap {
+	@include clearfix;
+	margin-bottom: rem-calc(8);
+}
+
+.cart__priceText,
+.cart__priceAmount {
+	text-transform: uppercase;
+	&.savings {
+		color: #d70606;
+	}
+	&.total {
+		color: #027705;
+	}
+}
+
+.cart__priceText {
+	float: left;
+	font-size: rem-calc(11);
+}
+
+.cart__priceAmount {
+	float: right;
+	font-size: rem-calc(13);
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	&.strike {
+		text-decoration: line-through;
+	}
+	&.total {
+		font-size: rem-calc(15);
+	}
+	&.savings {
+		font-family: 'robotoregular', georgia, serif;
+		font-size: rem-calc(11);
+	}
+}
+
+////*Cart Footer*////
+.cart__footer {
+	@include grid-block;
+	@include grid-wrap(true);
+	overflow:visible;
+	background-color: #eee;
+
+}
+
+
+.cart__aux {
+	@include grid-content(12);
+	overflow:visible;
+	@include breakpoint(640) {
+		@include grid-content(5);
+	}
+}
+
+.cart__total {
+	@include grid-content(12);
+
+	overflow:visible;
+	@include breakpoint(640) {
+		@include grid-content(7);
+	}
+}
+
+
+
+
+.cart__totalMod {
+	@include clearfix;
+	padding-left: rem-calc(16);
+	padding-right: rem-calc(16);
+	background-color: #fff;
+	overflow:visible;
+	margin-bottom:rem-calc(16);
+	@include breakpoint(640) {
+
+	}
+	@include breakpoint(820) {
+	width:rem-calc(438);
+	}
+	@include breakpoint(1200) {
+		margin-left:13%;
+	}
+
+
+& p {
+	text-align: center;
+	@include breakpoint(640) {
+		text-align: left;
+	}
+}
+}
+
+.cart__specify,
+.cart__amount {
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	font-size: rem-calc(16);
+	text-transform: uppercase;
+	margin-bottom: rem-calc(16);
+	@include breakpoint(480) {
+		font-size: rem-calc(24);
+	}
+}
+.cart__specify {
+	width: 50%;
+	float: left;
+	line-height: rem-calc(28);
+	@include breakpoint(480) {
+	line-height: rem-calc(40);
+	}
+}
+.cart__amount {
+	width: 50%;
+	float: right;
+	background-color: #f1f8f1;
+	color: #027705;
+	text-align: right;
+	padding-top: rem-calc(8);
+	padding-bottom: rem-calc(8);
+	padding-right: rem-calc(8);
+	display: block;
+}
+.button.continue,
+.button.checkout {
+	width: 100%;
+	@include breakpoint(480) {
+		width: auto;
+	}
+	@include breakpoint(640) {
+		width: 100%;
+	}
+	@include breakpoint(820) {
+		width: auto;
+	}
+}
+	.button.continue {
+		@include breakpoint(480) {
+			margin-right: rem-calc(16);
+		}
+	}
+
+	.cart__caption {
+		color: #414141;
+		clear: both;
+		font-size: rem-calc(12);
+
+	}
+
+	.cart__buttons {
+		text-align: center;
+		@include clearfix;
+
+	}
+
+////*Action Sheet styles*////
+
+
+.productDrops__drop{position:relative;}
+#cart__moveCart .action-sheet{
+	
+	@include breakpoint(640) {
+		left:23%;
+}
+	&:before,
+	&:after{
+		left:67%;
+	
+	}
+}
+
+#cart__moveItem .action-sheet{
+	@include breakpoint(640) {
+		left:0;
+		&:before,
+		&:after{
+		left:67%;
+	
+	}
+}
+}

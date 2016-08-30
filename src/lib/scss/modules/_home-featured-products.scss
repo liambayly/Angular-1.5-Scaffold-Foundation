@@ -1,0 +1,37 @@
+////*Featured Products Module*////
+.featureProduct {
+	& .slick-slide img {
+		
+	}
+	& h2.sectionTitle--medium {
+		text-align: center;
+	}
+	& .slick-prev,
+	.slick-next {
+		top: 0;
+	}
+
+	& .slick-prev:before,
+	.slick-next:before {
+		font-size: rem-calc(24);
+		@include breakpoint(rem-calc(800)) {
+			font-size: rem-calc(42);
+		}
+	}
+}
+.featureProduct__card {
+	padding: 0 rem-calc(20);
+
+	@include breakpoint(rem-calc(1024)) {
+		border-right: 1px solid #c7c7c7;
+		&:nth-child(4n) {
+			border: none;
+		}
+	}
+	& ul li p {
+		font-family: roboto_slablight, georgia, serif;
+		font-size: .9rem;
+		line-height: 1.4;
+		margin-bottom: rem-calc(10);
+	}
+}

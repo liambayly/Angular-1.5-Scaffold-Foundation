@@ -1,0 +1,592 @@
+//CONTENT PAGES//
+.contentPage {
+	padding: rem-calc(10) rem-calc(0) rem-calc(25) rem-calc(0);
+	@include clearfix;
+	@include breakpoint (medium) {
+		padding-top: rem-calc(25);
+		background-image: //url("../img/grunge-line.png"),
+		url("../img/muscle-fiber-left.png"), url("../img/muscle-fiber-right.png");
+		background-repeat: no-repeat;
+		background-position:
+			//top center,
+			top left,
+			top right;
+		background-size: //auto,
+			643px 648px,
+			623px 334px;
+	}
+}
+
+.contentPage__h3 {
+	margin-top: rem-calc(32);
+	font-size: rem-calc(26);
+}
+
+.contentPage__h2 {
+	@include grid-content;
+	font-family: 'robotobold';
+	margin-top: rem-calc(32);
+	font-size: rem-calc(26);
+}
+
+.contentWrap {
+	@include clearfix;
+	background-color: rgba(255, 255, 255, 0.7);
+	width: 100%;
+	//padding: rem-calc(0) rem-calc(0) rem-calc(0) rem-calc(0);
+	background-color: rgba(255, 255, 255, 0.7);
+	@include breakpoint (medium) {
+		//padding-top: rem-calc(20);
+		overflow: visible;
+	}
+	@include breakpoint (1000) {
+		//padding-top: rem-calc(25);
+		overflow: visible;
+	}
+}
+
+.contentBody {
+	@include grid-container;
+	&.contentPadding {
+		padding: 0 rem-calc(16);
+	}
+	overflow: visible;
+}
+
+.pageCrumb {
+	font-family: 'robotoblack';
+	text-transform: uppercase;
+	font-size: rem-calc(14);
+	line-height: rem-calc(16);
+	text-align: center;
+	margin-bottom: rem-calc(0);
+	@include breakpoint (medium) {
+		font-size: rem-calc(20);
+		line-height: rem-calc(24);
+	}
+	@include breakpoint (large) {
+		font-size: rem-calc(24);
+		line-height: rem-calc(30);
+	}
+}
+
+.pageTitle {
+	font-family: 'robotoblack';
+	text-transform: uppercase;
+	text-align: center;
+	@include breakpoint (medium) {
+		padding-bottom: rem-calc(10);
+	}
+}
+
+.pageTitle {
+	font-size: rem-calc(18);
+	line-height: rem-calc(22);
+	@include breakpoint (medium) {
+		font-size: rem-calc(32);
+		line-height: rem-calc(36);
+	}
+	@include breakpoint (large) {
+		font-size: rem-calc(48);
+		line-height: rem-calc(50);
+	}
+}
+
+////*Styles for Page Content Formating*////
+////*Page Structure*////
+section {
+	padding: rem-calc(16) 0;
+	clear: both;
+	@include breakpoint(medium) {
+		padding: rem-calc(35) 0;
+	}
+	@include breakpoint(rem-calc(760)) {
+		padding: rem-calc(55) 0;
+	}
+	@include breakpoint(rem-calc(1000)) {
+		padding: rem-calc(70) 0;
+	}
+	&.bottomPadding {
+		padding: rem-calc(0) 0 rem-calc(16) 0;
+		@include breakpoint(medium) {
+			padding: rem-calc(0) 0 rem-calc(35) 0;
+		}
+		@include breakpoint(rem-calc(760)) {
+			padding: rem-calc(0) 0 rem-calc(55) 0;
+		}
+		@include breakpoint(rem-calc(1000)) {
+			padding: rem-calc(0) 0 rem-calc(70) 0;
+		}
+	}
+	&:first-child {
+		padding-top: rem-calc(16);
+		
+	}
+}
+
+section.home {
+	padding: rem-calc(45) 0;
+	@include breakpoint(rem-calc(760)) {
+		padding: rem-calc(70) 0;
+	}
+	@include breakpoint(rem-calc(1000)) {
+		padding: rem-calc(90) 0;
+	}
+}
+
+.content__block {
+	@include grid-block(12);
+	@include grid-wrap(true);
+	//padding-top:rem-calc(15);
+	overflow: visible;
+}
+
+.content__block--half {
+	@include grid-block(12);
+	@include grid-wrap(true);
+	//padding-top:rem-calc(15);
+    overflow: visible;
+    
+    @include breakpoint(medium) {
+		@include grid-block(6);
+        @include grid-wrap(true);
+        overflow: visible;
+	}
+}
+
+.content__full {
+	@include grid-content(12);
+	overflow: visible;
+}
+
+.content__full--bottomBorder {
+	@include grid-content(12);
+	overflow: visible;
+	padding-bottom: rem-calc(30);
+	margin-bottom: rem-calc(30);
+	border-bottom: 1px solid #c7c7c7;
+}
+
+.content__half {
+	@include grid-content(12);
+    overflow: visible;
+	@include breakpoint(medium) {
+		@include grid-content(6);
+
+        overflow: visible;
+	}
+}
+
+.content__thirds {
+	
+@include grid-content(12);
+	@include breakpoint(medium){
+	@include grid-content(4);
+    overflow: visible;}
+}
+
+.content__fourths {
+	@include grid-content(12);
+	@include breakpoint(medium) {
+		@include grid-content(6);
+	}
+	@include breakpoint(1000) {
+		@include grid-content(4);
+	}
+	@include breakpoint(1200) {
+		@include grid-content(3);
+	}
+}
+
+.content__fifths {
+	@include grid-content(12);
+	@include breakpoint(480) {
+		@include grid-content(6);
+	}
+	@include breakpoint(medium) {
+		@include grid-content(4);
+	}
+	@include breakpoint(1100) {
+		@include grid-content(2.4);
+	}
+}
+
+.content__sixths {
+	@include grid-content(12);
+}
+
+
+/*Sections with one-third and two-third ratio*/
+
+.content__sm {
+	@include grid-content(12); //one-third
+    overflow: visible;
+	@include breakpoint(750) {
+		@include grid-content(4);
+        overflow: visible;
+
+	}
+}
+
+.content__lg {
+	@include grid-content(12); //two-third
+	@include breakpoint(750) {
+		@include grid-content(8);
+	}
+	& .content__half {
+		padding-left: 0;
+		overflow: visible;
+		@include breakpoint(750) {
+			@include grid-content(12);
+			overflow: visible;
+		}
+		@include breakpoint(1000) {
+			@include grid-content(6);
+			overflow: visible;
+		}
+	}
+}
+
+.content__full,
+.content__half,
+.content__thirds,
+.content__fourths,
+.content__fifths,
+.content__sixths,
+.content__sm,
+.content__lg {
+	padding-top: rem-calc(16);
+	padding-bottom: rem-calc(16);
+	overflow: visible;
+}
+
+////*To USE without Flex Box*////
+.content__sm--noFlex {
+	width: 100%;
+	padding: 1.875rem .9375rem 0;
+	@include breakpoint(750) {
+		float: left;
+		width: 33.33333%;
+	}
+}
+
+.content__lg--noFlex {
+	width: 100%;
+	padding: 1.875rem .9375rem 0;
+	@include breakpoint(750) {
+		width: 66.66667%;
+		float: right;
+	}
+}
+
+.content__half--noFlex {
+	width: 100%;
+	padding: 1.875rem .9375rem 0;
+	@include breakpoint(750) {
+		width: 50%;
+		float: left;
+	}
+}
+
+.content__thirds--noFlex {
+	width: 100%;
+	padding: 1.875rem .9375rem 0;
+	@include breakpoint(750) {
+		width: 33.3333%;
+		float: left;
+	}
+}
+
+////*Page Heaadings*////
+.content__h2,
+.content__h4,
+.content__h5,
+.content__h6 {
+	text-transform: uppercase;
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	text-align: left;
+	@include breakpoint(medium) {}
+}
+
+.content__h2 {
+	font-size: rem-calc(20);
+	line-height: rem-calc(28);
+	margin-bottom: rem-calc(0);
+	@include breakpoint(medium) {
+		font-size: rem-calc(34);
+		line-height: rem-calc(42);
+	}
+	@include breakpoint(large) {
+		font-size: rem-calc(40);
+		line-height: rem-calc(48);
+		margin-bottom: rem-calc(0);
+	}
+}
+
+.content__h3 {
+	font-size: rem-calc(18);
+	line-height: rem-calc(26);
+	margin-bottom: rem-calc(15);
+	color: #40345e;
+	font-family: 'robotobold', helvetica, arial, sans-serif;
+	@include breakpoint(medium) {
+		font-size: rem-calc(22);
+		line-height: rem-calc(30);
+	}
+	@include breakpoint(large) {
+		font-size: rem-calc(26);
+		line-height: rem-calc(34);
+		margin-bottom: rem-calc(24);
+	}
+}
+
+.content__h4 {
+	font-size: rem-calc(16);
+	line-height: rem-calc(24);
+	@include breakpoint(medium) {
+		font-size: rem-calc(20);
+		line-height: rem-calc(28);
+	}
+	@include breakpoint(large) {
+		font-size: rem-calc(24);
+		line-height: rem-calc(32);
+	}
+}
+
+.content__h5 {
+	font-size: rem-calc(20);
+	line-height: rem-calc(28);
+	margin-bottom: rem-calc(15);
+	@include breakpoint(medium) {
+		font-size: rem-calc(22);
+		line-height: rem-calc(30);
+	}
+	@include breakpoint(large) {
+		font-size: rem-calc(24);
+		line-height: rem-calc(32);
+	}
+}
+
+.content__h6 {
+	font-size: rem-calc(18);
+	line-height: rem-calc(26);
+	margin-bottom: rem-calc(15);
+	@include breakpoint(medium) {
+		font-size: rem-calc(20);
+		line-height: rem-calc(28);
+	}
+	@include breakpoint(large) {
+		font-size: rem-calc(22);
+		line-height: rem-calc(30);
+	}
+}
+
+.content__h3--out {
+	margin-left: rem-calc(0);
+	@include breakpoint(750) {
+		margin-left: rem-calc(16);
+	}
+}
+
+.content__emphasis {
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	font-size: rem-calc(20);
+}
+
+.content__p--lg {
+	font-size: rem-calc(20);
+}
+
+.padLeft {
+	padding-left: rem-calc(16);
+}
+
+.padRight{
+	padding-right:rem-calc(16);
+}
+
+.padTop {
+	padding-top: rem-calc(16);
+}
+
+.padTop--half {
+	padding-top: rem-calc(8);
+}
+
+.padBottom {
+	padding-bottom: rem-calc(16);
+}
+
+.content__dark {
+	color: #000;
+}
+
+.content__light {
+	color: #fff;
+}
+
+p.content__p--half {
+	margin-bottom: rem-calc(0);
+}
+
+.margin-bottom--none {
+	margin-bottom: rem-calc(0);
+}
+
+.margin-top--none {
+	margin-top: rem-calc(0);
+}
+
+.content__image {
+	padding: rem-calc(30);
+}
+
+.content__emphasis {
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	font-size: rem-calc(20);
+}
+
+.content__p--lg {
+	font-size: rem-calc(20);
+}
+
+.columnSpan {
+	-webkit-columns: rem-calc(250) 3;
+	/* Chrome, Safari, Opera */
+	-moz-columns: rem-calc(250) 3;
+	/* Firefox */
+	columns: rem-calc(250) 3;
+	-webkit-column-gap: rem-calc(30);
+	/* Chrome, Safari, Opera */
+	-moz-column-gap: rem-calc(30);
+	/* Firefox */
+	column-gap: rem-calc(30);
+}
+
+
+/*  colors for text  */
+
+.lightPurple {
+	color: #716490;
+}
+
+.lighterPurple {
+	color: #dad5e7;
+}
+
+.black {
+	color: #000;
+}
+
+.white {
+	color: white;
+}
+
+.center {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.grayBackground {
+	background-color: #e6e5eb;
+}
+
+.purpleBackground {
+	background-color: #5a4099;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.smallMsg {
+	font-family: 'robotobold';
+	font-size: rem-calc(13);
+	margin-top: rem-calc(-13);
+}
+
+//  styles for responsive product info grid  
+.productGrid__Block {
+	@include grid-block(12);
+	padding-top: rem-calc(16);
+	padding-bottom: rem-calc(16);
+	border-bottom: rem-calc(1) solid gray;
+	@include grid-wrap(true);
+	overflow: visible;
+	@include breakpoint(medium) {
+		@include grid-block(6);
+		//padding-top: rem-calc(16);
+		//padding-bottom: rem-calc(16);
+		padding: rem-calc(20);
+		border-bottom: none;
+		@include grid-wrap(true);
+		overflow: visible;
+	}
+	@include breakpoint(large) {
+		@include grid-block(4);
+		padding: rem-calc(30);
+		border-bottom: none;
+		@include grid-wrap(true);
+		overflow: visible;
+	}
+}
+
+.brands__newProducts .productGrid__Block {
+	margin-top: rem-calc(16);
+}
+
+.productGrid__Block:nth-last-child(1) {
+	border-bottom: none;
+}
+
+.productGrid__productImage {
+	@include grid-content(4);
+	@include grid-wrap(true);
+	position: relative;
+	text-align: center;
+	overflow: visible;
+	img {
+		//max-height: rem-calc(90);
+		margin-bottom: rem-calc(16);
+		overflow: visible;
+	}
+	@include breakpoint(medium) {
+		@include grid-content(3);
+		padding: 0;
+		overflow: visible;
+		text-align: center;
+		margin: 0 auto;
+	}
+}
+
+.productGrid__specialInfo {
+	@include grid-content(8);
+	@include grid-wrap(true);
+	overflow: visible;
+	//text-align: center;
+	@include breakpoint(medium) {
+		@include grid-content(9);
+		text-align: left;
+        overflow: visible;
+	}
+}
+
+.productGrid__Block .product__discontinued {
+	width: 100%;
+	background: #fbeded url('../img/discontinued.png') repeat;
+	text-align: center;
+	color: #d70303;
+	font-size: rem-calc(10);
+	padding: rem-calc(6);
+	margin-bottom: rem-calc(10);
+	margin-top: rem-calc(0);
+	@include breakpoint (400) {
+		font-size: rem-calc(12);
+	}
+	@include breakpoint (640) {
+		font-size: rem-calc(10);
+	}
+	@include breakpoint (840) {
+		font-size: rem-calc(12);
+	}
+}

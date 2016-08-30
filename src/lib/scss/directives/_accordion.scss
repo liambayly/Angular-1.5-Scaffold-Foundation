@@ -1,0 +1,30 @@
+.accordion-content {
+	@include clearfix;
+}
+
+.accordion {
+	border-top: none;
+}
+
+.accordion-title {
+	font-family: 'robotoblack', helvetica, arial, san-serif;
+	line-height: rem-calc(24);
+	border-top: 1px dotted #c7c7c7;
+	font-size: rem-calc(16);
+	&:after {
+		content: "\e609";
+		font-family: europa-sports;
+		speak: none;
+		padding: 0 rem-calc(0) 0 rem-calc(16);
+		float: right;
+	}
+}
+
+.is-active>.accordion-title {
+	&:after {
+		content: "\e606";
+		font-family: europa-sports;
+		speak: none;
+		
+	}
+}

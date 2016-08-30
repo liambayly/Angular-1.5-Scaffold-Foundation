@@ -1,0 +1,107 @@
+.cartConfirmation {
+    padding-bottom: 0;
+    
+    h2 {
+        border-bottom: rem-calc(1) solid #c7c7c7;
+        padding-bottom: 0;
+    }
+}
+
+.cartConfirmation__content {
+    @include grid-block;
+    @include grid-wrap(true);
+    padding: rem-calc(20) rem-calc(0);
+    overflow: visible;
+}
+
+.cartConfirmation__contentText {
+    @include grid-content(12);
+    border-bottom: rem-calc(1) solid #e4e4e4;
+    overflow: visible;
+    
+    @include breakpoint(769) {
+        @include grid-content(6);
+        border-right: rem-calc(1) solid #e4e4e4;
+        border-bottom: none;
+    }
+}
+
+.cartConfirmation__contentRight {
+    @include grid-block(12);
+    padding-top: rem-calc(20);
+    @include grid-wrap(true);
+    overflow: visible;
+    
+    @include breakpoint(769) {
+        @include grid-block(6);
+        @include grid-wrap(true);
+        padding-top: 0;
+    }
+}
+
+.cartConfirmation__bold {
+    font-family: 'robotoblack';
+}
+
+.cartConfirmation__bold--green {
+    font-family: 'robotoblack';
+    font-size: rem-calc(20);
+    color: #027705;
+}
+
+.button--inline {
+    width: 100%;
+    
+    @include breakpoint(400) {
+    width: auto;
+    float: left;
+    }
+}
+
+.cartConfirmation__statement--small {
+    font-size: rem-calc(12);
+
+}
+
+.cartConfirmation__icon {
+    font-size: rem-calc(80);
+    //padding-right:rem-calc(25);
+}
+
+
+.cartConfirmation__contentRight p {
+    padding-top: rem-calc(15);
+}
+
+.cartConfirmation__contentIcon {
+    @include grid-content(12);
+    text-align: center;
+    overflow: visible;
+    
+    breakpoint(400) {
+        @include grid-content(3);
+        text-align: left;
+        margin-bottom: rem-calc(40);
+    }
+    
+    @include breakpoint(medium) {
+        @include grid-content(3);
+        @include grid-size(shrink);
+        overflow: visible;
+        margin-bottom: rem-calc(40);
+    }
+}
+    
+.cartConfirmation__iconText {
+    @include grid-content(12); 
+    overflow: visible;
+    text-align: center;
+    
+ 
+    
+    @include breakpoint(medium) {
+        @include grid-content(9);
+        text-align: left;
+        overflow: visible;
+    }
+}

@@ -1,0 +1,141 @@
+////*Brands Landing Page*////
+
+.brands.brands-landing .contentBody {
+	@include breakpoint(750) {
+		background-image: url("../img/background-isle.png");
+		background-repeat: no-repeat;
+		background-position: right rem-calc(-8);
+		background-size: rem-calc(750);
+	}
+	@include breakpoint(1100) {
+		background-size: rem-calc(1100);
+	}
+}
+
+.brands__marketing {
+	@include breakpoint(750) {
+		background-color: rgba(255, 255, 255, .8);
+		padding: rem-calc(16);
+	}
+	& a {
+		font-family: 'robotoblack', helvetica, arial, sans-serif;
+		text-transform: uppercase;
+		font-size: rem-calc(16);
+		text-decoration: none;
+	}
+}
+
+.brands__marketingBlurb {
+	margin-bottom: 0;
+	font-size: rem-calc(18);
+	line-height: rem-calc(26);
+	@include breakpoint(750) {
+		font-size: rem-calc(26);
+		line-height: rem-calc(34);
+	}
+	
+	@include breakpoint(1100) {
+		font-size: rem-calc(32);
+		line-height: rem-calc(40);
+	}
+}
+
+
+////*Brands Detail Page*////
+
+.brands__media .content__lg{
+	@include grid-order(2);
+	@include breakpoint(750){
+		@include grid-order(1);
+	}
+}
+
+.brands__media .content__sm{
+	@include grid-order(1);
+	@include breakpoint(750){
+		@include grid-order(2);
+	}
+}
+
+.brands__detail .content__h3{
+	margin-bottom:rem-calc(6);
+}
+
+.brands__detail .product__specify.margin-top--none{
+	margin-top:0;
+}
+
+.brands__visit{
+	font-family: 'robotoblack', helvetical,arial,sans-serif;
+	font-size:rem-calc(18);
+	&:before{
+		content:"\e617";
+		font-family:'europa-sports';
+		margin-right:rem-calc(4);
+	}
+}
+
+.brands__view{
+	font-family: 'robotoblack', helvetical,arial,sans-serif;
+	font-size:rem-calc(16);
+	margin-top:rem-calc(16);
+	display: inline-block;
+	margin-right:rem-calc(16);
+	&:before{
+		content:"\e604";
+		font-family:'europa-sports';
+		margin-right:rem-calc(4);
+		font-size:rem-calc(20);
+	}
+}
+
+.brands__download{
+	font-family: 'robotoblack', helvetical,arial,sans-serif;
+	font-size:rem-calc(16);
+	margin-top:rem-calc(16);
+	display: inline-block;
+	&:before{
+		content:"\e60d";
+		font-family:'europa-sports';
+		margin-right:rem-calc(4);
+		font-size:rem-calc(20);
+	}
+}
+
+.brands__detail .content__thirds--noFlex{
+	width:33.333%;
+	float:left;
+	padding-left:0;
+	padding-top:0;
+}
+
+.brands__button{
+	display:block;
+	background-color:$primary-color;
+	text-align: center;
+	padding:rem-calc(30) rem-calc(12);
+	font-family: 'robotoblack', helvetica,arial,sans-serif;
+	font-size: rem-calc(20);
+	text-transform: uppercase;
+	color:#fff;
+	border-radius: rem-calc(8);
+	&:hover{
+		background-color:smartscale($primary-color, -40%);
+		color:#fff;
+	}
+}
+
+.brands__activity{
+	position:relative;
+	overflow:visible;
+	& .badge{
+		position:absolute;
+		font-family: 'robotoblack', helvetica,arial,sans-serif;
+		background-color: #000;
+		font-size:rem-calc(16);
+    	width:rem-calc(30);
+		height:rem-calc(30);
+		top:rem-calc(2);
+		left:45%;
+	}
+}

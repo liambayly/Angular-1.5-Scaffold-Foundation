@@ -1,0 +1,44 @@
+//*FORMS*//
+label {
+	font-family: 'roboto_slablight', georgia, serif;
+	color: #312c40;
+	font-size: rem-calc(14);
+}
+
+.error,
+.success {
+	margin: rem-calc(15) 0;
+	display: block;
+	padding: rem-calc(15);
+	color: #fff;
+	font-family: 'roboto_slablight', georgia, serif;
+	font-size: rem-calc(14);
+}
+
+.error {
+	background-color: $alert-color;
+}
+
+.success {
+	background-color: $success-color;
+}
+
+.forgotPassword__success {
+	@include clearfix;
+}
+
+.resetPassword {
+	max-width: rem-calc(400);
+	margin: rem-calc(20) auto rem-calc(80) auto;
+}
+
+select.select {
+	background-color: #fff;
+	border: 1px solid #c7c7c7;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-overflow: '';
+	text-indent: 0.01px;
+	line-height: rem-calc(20);
+}

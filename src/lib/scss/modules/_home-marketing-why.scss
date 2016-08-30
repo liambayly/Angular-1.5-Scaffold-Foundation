@@ -1,0 +1,56 @@
+////*Marketing Why Module*////
+.marketingWhy {
+	background-color: $primary-color;
+	@include breakpoint(medium) {
+		background: $primary-color url('../img/background-warehouse.jpg') no-repeat;
+		background-size: cover;
+		background-attachment:fixed;
+	}
+	& h2.sectionTitle--white {
+		text-align: center;
+		padding-top: rem-calc(50);
+	}
+	& h3.sectionSubtitle--lite {
+		text-align: center;
+		margin-bottom: 0;
+	}
+}
+.marketingWhy__container {
+	@include grid-container;
+	background-image: url('../img/background-patterns/black_twill.png');
+}
+.marketingWhy__block {
+	@include grid-block;
+	@include grid-wrap(true);
+	text-align: center;
+	padding: rem-calc(50);
+	& .button {
+		margin: 0 auto;
+	}
+}
+.marketingWhy__content {
+	@include grid-content(12);
+	margin-bottom: rem-calc(30);
+	@include breakpoint(rem-calc(1000)) {
+		@include grid-content(4);
+	}
+}
+.marketingWhy__icon {
+	font-size: rem-calc(90);
+	line-height: rem-calc(90);
+	color: #fff;
+	margin-bottom: rem-calc(15);
+	display: block;
+}
+.h4 {
+	font-size: rem-calc(32);
+	line-height: rem-calc(40);
+	text-transform: uppercase;
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+}
+.h4--lite {
+	color: #fff;
+}
+.marketingWhy__desc {
+	color: #ebe8f4;
+}

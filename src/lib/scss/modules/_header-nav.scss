@@ -1,0 +1,135 @@
+/*HEADER PRIMARY NAVIGATION*/
+
+/////*Main Navigation Module*/////
+
+/*Main Navigation Module: Mobile*/
+
+#mainNav-mobile {
+	z-index: 9999999999999999999999999999999;
+	background-color: $secondary-color;
+	padding-top: 5%;
+	@include breakpoint(medium) {
+		padding-top: 25%;
+	
+	}
+	/* Landscape */
+	@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+		padding-top: 1%;
+	}
+	@include breakpoint(rem-calc(1000)) {
+		display: none;
+	}
+	& img {
+		width: rem-calc(100);
+		opacity: .5;
+	}
+}
+
+.mainNav-mobile__link,
+.mainNav-mobile__button {
+	font-family: 'robotoblack', helvetica, arial, sans-serif, ;
+	text-transform: uppercase;
+	color: smartscale(#fff, 25%);
+	&:hover,
+	&:focus,
+	&:active {
+		color: #fff;
+	}
+}
+
+.mainNav-mobile__link {
+	font-size: rem-calc(22);
+	line-height: rem-calc(38);
+	@include breakpoint(medium) {
+	font-size: rem-calc(30);
+	line-height: rem-calc(50);
+	
+	}
+	
+}
+
+.mainNav-mobile__button {
+	font-size: rem-calc(13);
+	line-height: rem-calc(24);
+	margin-left: 7%;
+	letter-spacing: 1px;
+	&:hover {
+		color: #fff
+	}
+	@include breakpoint(medium) {
+		font-size: rem-calc(16);
+		line-height: rem-calc(24);
+		margin-top: 1%;
+		margin-left: 5%;
+	}
+	@include breakpoint(rem-calc(1000)) {
+		display: none;
+	}
+}
+
+
+/*Main Navigation Module: Full*/
+
+.mainNav {
+	display: none;
+	position: relative;
+	@include breakpoint(rem-calc(1000)) {
+		display: block;
+	}
+}
+
+.mainNav__list {
+	margin-left: 0;
+	margin-bottom: 0;
+}
+
+.mainNav__item {
+	overflow:visible;
+	display: inline-block;
+	position:relative;
+	@include breakpoint(rem-calc(1000)) {
+		padding: 0 rem-calc(6) rem-calc(15);
+	}
+	@include breakpoint(large) {
+		padding: 0 rem-calc(12) rem-calc(15);
+	}
+	@include breakpoint(rem-calc(1300)) {
+		padding: 0 rem-calc(16) rem-calc(15);
+		
+	}
+	letter-spacing: 1px;
+	&.mainNav--active{
+		background: rgba(255,255,255,1);
+
+		& a.mainNav__link{
+			color:#000;
+			&:hover{
+			color:smartscale(#000, 20%);
+			}
+		}
+	}
+	
+	
+}
+
+.mainNav__link {
+	
+	overflow:visible;
+	text-transform: uppercase;
+	color: smartscale(#fff, 25%);
+	font-family: 'robotoblack', Helvetica, Arial, san-serif;
+	&:hover,
+	&:focus,
+	&:active {
+		color: #fff;
+	}
+	@include breakpoint(rem-calc(1000)) {
+		font-size: rem-calc(15);
+	}
+	@include breakpoint(large) {
+		font-size: rem-calc(17);
+	}
+	@include breakpoint(rem-calc(1400)) {
+		font-size: rem-calc(19);
+	}
+}

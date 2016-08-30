@@ -1,0 +1,367 @@
+.events__year{
+
+	@include grid-content;
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	font-size: rem-calc(20);
+	line-height: rem-calc(20);
+	text-transform: uppercase;
+	margin-bottom:0;
+
+	@include breakpoint(medium){
+		font-size: rem-calc(24);
+		line-height: rem-calc(24);
+	}
+}
+
+.events__month{
+	@include grid-content;
+	font-family: 'robotoregular', helvetica, arial, sans-serif;
+	font-size: rem-calc(24);
+	line-height:rem-calc(38);
+	text-transform: uppercase;
+	margin-bottom:0;
+	margin-top:rem-calc(40);
+	color:#555;
+
+	@include breakpoint(medium){
+		font-size: rem-calc(36);
+		line-height:rem-calc(50);
+	}
+
+	&.first{
+	margin-top:rem-calc(0);
+	}
+}
+
+.events__item{
+	@include grid-block;
+	@include grid-wrap(true);
+	margin:rem-calc(16);
+
+
+}
+
+.events__date{
+	@include grid-content(12);
+	@include grid-size(shrink);
+
+	background-color: $primary-color;
+	padding: rem-calc(6);
+
+	@include breakpoint(medium){
+	@include grid-content(1.2);
+	padding: rem-calc(10) 0;
+	}
+
+	@include breakpoint(1000){
+		padding: rem-calc(24) 0;
+	}
+}
+
+
+.events__day{
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	font-size: rem-calc(14);
+	line-height: rem-calc(16);
+	color:#fff;
+	margin-bottom:0;
+	text-align: center;
+
+	@include breakpoint(medium){
+	font-size: rem-calc(22);
+	line-height: rem-calc(24);
+
+	}
+
+	@include breakpoint(1000){
+		font-size: rem-calc(30);
+		line-height: rem-calc(32);
+
+	}
+}
+
+.events__month--sm{
+	font-family: 'robotobold', helvetica, arial, sans-serif;
+	font-size: rem-calc(12);
+	line-height: rem-calc(14);
+	color:#aca2cb;
+	margin-bottom:0;
+	text-align: center;
+	text-transform: uppercase;
+
+	@include breakpoint(medium){
+		font-size: rem-calc(19);
+		line-height: rem-calc(21);
+	}
+
+	@include breakpoint(1000){
+		font-size: rem-calc(22);
+		line-height: rem-calc(24);
+	}
+}
+
+.events__info{
+	@include grid-block(12);
+	@include grid-wrap(true);
+	overflow:visible;
+	background-color:#f8f8f8;
+	min-height:rem-calc(65);
+	@include breakpoint(medium){
+		@include grid-block(10.8);
+		@include grid-wrap(true);
+		min-height:rem-calc(76);
+	}
+
+	@include breakpoint(1000){
+		min-height:rem-calc(104);
+	}
+}
+
+.events__head{
+	@include grid-content(12);
+	position:relative;
+	overflow:visible;
+	@include breakpoint(medium){
+
+	}
+}
+
+.events__name{
+	font-family: 'robotobold', helvetica, arial, sans-serif;
+	font-size:rem-calc(16);
+	margin-top: rem-calc(10);
+	text-transform: uppercase;
+	margin-bottom:0;
+	display: block;
+
+	@include breakpoint(medium){
+		font-size:rem-calc(21);
+		margin-top: rem-calc(12);
+
+	}
+
+	@include breakpoint(1000){
+		font-size:rem-calc(26);
+		margin-top: rem-calc(20);
+	}
+}
+
+/*Expand button*/
+.events .content__expand{
+
+color:$primary-color;
+	&:before{
+		content:"\e636";
+		font-family: 'europa-sports';
+		font-size: rem-calc(25);
+		position:absolute;
+		top:rem-calc(16);
+		right:rem-calc(16);
+
+		@include breakpoint(medium){
+			top:rem-calc(26);
+
+		}
+
+		@include breakpoint(1000){
+			font-size: rem-calc(30);
+			top:rem-calc(36);
+
+		}
+	}
+
+	&.active{
+		&:before{
+		content:"\e611";
+		font-family: 'europa-sports';
+
+	}
+
+		}
+	&:hover{
+				color:#000;
+			}
+}
+
+.events__location{
+font-size: rem-calc(13);
+	line-height:rem-calc(19);
+text-transform: uppercase;
+margin-bottom:0;
+	@include breakpoint(medium){
+	font-size: rem-calc(15);
+	line-height:rem-calc(21);
+
+	}
+
+	@include breakpoint(1000){
+	font-size: rem-calc(18);
+	line-height:rem-calc(24);
+
+	}
+
+}
+/*Vertical Spacing*/
+
+.events__content,
+.events__venue,
+.events__description,
+.events__gallery{
+	margin-bottom:rem-calc(16);
+
+	@include breakpoint(medium){
+		margin-bottom:rem-calc(30);
+	}
+}
+
+
+
+.events__content,
+.events__actions{
+	@include grid-block;
+	@include grid-wrap(true);
+}
+
+.events__actions{
+	margin:rem-calc(16) 0;
+	text-align: center;
+	@include breakpoint(550){
+	margin:rem-calc(30) 0;
+	text-align: left;
+	}
+}
+
+.events__logo{
+	@include grid-content(12);
+	& img{
+		width:60%;
+	}
+	@include breakpoint(550){
+		@include grid-content(5);
+
+		& img{
+		width:100%;
+	}
+		@include breakpoint(900){
+			@include grid-content(3);
+		}
+	}
+}
+
+.events__links{
+	@include grid-content(12);
+	@include breakpoint(550){
+	@include grid-content(7);
+	}
+
+	@include breakpoint(900){
+	@include grid-content(9);
+	}
+}
+
+.events__moreInfo{
+	font-family: 'robotobold', helvetica, arial, sans-serif;
+	font-size: rem-calc(18);
+	text-transform: uppercase;
+	margin-top:rem-calc(30);
+	margin-bottom:rem-calc(16);
+	display: block;
+	&:before{
+		content:"\e607";
+		font-family: 'europa-sports';
+		margin-right:rem-calc(8);
+	}
+}
+
+.events__venue{
+@include grid-content(12);
+}
+
+.events__specify{
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	font-size: rem-calc(14);
+	line-height: rem-calc(20);
+	text-transform: uppercase;
+	margin-bottom: 0;
+
+	@include breakpoint(medium){
+		font-size: rem-calc(18);
+		line-height: rem-calc(24);
+	}
+}
+
+.events__venueName{
+text-transform: uppercase;
+	font-size: rem-calc(14);
+	line-height: rem-calc(20);
+	margin-bottom: 0;
+
+	@include breakpoint(medium){
+		font-size: rem-calc(18);
+		line-height: rem-calc(24);
+	}
+}
+
+.events__description{
+	@include grid-content(12);
+	margin-bottom:rem-calc(16);
+	@include breakpoint(medium){
+		margin-bottom:rem-calc(30);
+	}
+	& p{
+		margin-bottom:0;
+	}
+
+}
+
+.events .columnSpan {
+	-webkit-columns: rem-calc(250) 2;
+	/* Chrome, Safari, Opera */
+	-moz-columns: rem-calc(250) 2;
+	/* Firefox */
+	columns: rem-calc(250) 2;
+	-webkit-column-gap: rem-calc(30);
+	/* Chrome, Safari, Opera */
+	-moz-column-gap: rem-calc(30);
+	/* Firefox */
+	column-gap: rem-calc(30);
+}
+
+.events__photos{
+	@include grid-content(12);
+
+	@include breakpoint(medium){
+		@include grid-content(6);
+	}
+}
+
+.events__gallery{
+	@include grid-content(12);
+
+}
+
+.events__icon{
+	font-size:rem-calc(40);
+float:left;
+	margin-right:rem-calc(8);
+}
+
+.events__galleryLink{
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	font-size: rem-calc(14);
+	line-height: rem-calc(16);
+	text-transform: uppercase;
+	margin-top:rem-calc(4);
+	display: inline-block;
+}
+
+.events__galleryCount{
+	color:#252525;
+	font-size: rem-calc(14);
+	line-height: rem-calc(20);
+	margin-bottom:0;
+}
+
+.events__additional{
+	@include grid-content(12);
+}

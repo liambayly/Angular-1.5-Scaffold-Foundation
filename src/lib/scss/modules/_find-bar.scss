@@ -1,0 +1,59 @@
+/////*Searchbar  Used on Shop by Brand and Sales*/////
+.findBar {
+	position: relative;
+	&.inline-label {
+		margin: rem-calc(0) 0 rem-calc(1);
+		@include breakpoint(medium) {
+			margin: rem-calc(8) 0 rem-calc(1);
+		}
+		@include breakpoint(rem-calc(1000)) {
+			margin: rem-calc(18) 0 rem-calc(1);
+		}
+	}
+	& input {
+		height: rem-calc(60);
+	}
+}
+
+input.findBar__input {
+
+	background-color: #fff;
+	font-size: rem-calc(22);
+	height: rem-calc(55);
+	font-family: "robotoblack", Helvetica, Arial, sans-serif;
+	&::-webkit-input-placeholder {
+		text-transform: uppercase;
+		color: rgba(0, 0, 0, .3);
+		font-size: rem-calc(18);
+		line-height: rem-calc(28);
+	}
+	&::-moz-placeholder {
+		text-transform: uppercase;
+		color: rgba(0, 0, 0, .3);
+		font-size: rem-calc(18);
+	}
+	&:-moz-placeholder {
+		/* Older versions of Firefox */
+		text-transform: uppercase;
+		color: rgba(0, 0, 0, .3);
+		font-size: rem-calc(18);
+	}
+	&:-ms-input-placeholder {
+		text-transform: uppercase;
+		color: rgba(0, 0, 0, .3);
+		font-size: rem-calc(18);
+	}
+}
+
+.findBar__magnify{
+	background-color:transparent;
+	color:#666;
+	min-width:rem-calc(55);
+	text-align: center;
+	font-size: rem-calc(28);
+	padding-top:rem-calc(12);
+	position:absolute;
+	height:rem-calc(53);
+	right:rem-calc(1);
+	top:rem-calc(1);
+}

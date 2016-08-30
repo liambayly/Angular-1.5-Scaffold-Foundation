@@ -1,0 +1,63 @@
+.content__tabs{
+
+
+	& .tabs{
+
+	@include grid-align(center);
+		margin-left:rem-calc(16);
+		margin-right:rem-calc(16);
+		min-height: rem-calc(40);
+		@include breakpoint(medium) {
+
+			padding-bottom:rem-calc(3);
+			min-height: rem-calc(50);
+		}
+
+	}
+	& .tab-item{
+		font-family: 'robotoblack', helvetica, arial, sans-serif;
+		text-transform: uppercase;
+		margin-top: rem-calc(6);
+		margin-left:rem-calc(6);
+		font-size: rem-calc(16);
+		transition:all 0.9s ease;
+
+		@include breakpoint(medium) {
+			font-size: rem-calc(20);
+			padding: rem-calc(10) rem-calc(15) rem-calc(15) rem-calc(15);
+			margin-bottom:rem-calc(-20);
+		}
+
+		@include breakpoint(large) {
+			font-size: rem-calc(24);
+
+
+		}
+		&:hover{
+		color:#000;
+		}
+
+		&:after{
+		content: "\e609";
+    	font-family: europa-sports;
+    	speak: none;
+		font-size:rem-calc(14);
+		padding:0 rem-calc(0) 0 rem-calc(16);
+
+			@include breakpoint(medium) {
+			font-size: rem-calc(18);
+		}
+		}
+
+	}
+
+	& .tab-contents{
+		padding:rem-calc(30) 0;
+
+			@include breakpoint (medium){
+				background: url("../img/grunge-line.png") no-repeat top center;
+				background-size:rem-calc(700);
+	}
+		}
+
+}

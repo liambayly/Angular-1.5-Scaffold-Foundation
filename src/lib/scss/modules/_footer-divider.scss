@@ -1,0 +1,41 @@
+////*Footer Divider with arrow*////
+.footer__dividerTitle {
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.footer__dividerTitle {
+	color: white;
+	font-size: rem-calc(21);
+	padding: rem-calc(15) rem-calc(0) rem-calc(15) rem-calc(0);
+	@include breakpoint (480) {
+		font-size: rem-calc(30);
+	}
+	@include breakpoint (medium) {
+		font-size: rem-calc(36);
+		padding: rem-calc(20) rem-calc(0) rem-calc(20) rem-calc(0);
+	}
+}
+
+.footer__divider {
+    background: #000;
+    position: relative;
+    margin-bottom: rem-calc(-34);
+    &::after {
+        @include css-triangle( $triangle-size: 25px, // Size of the triangle
+        $triangle-color: #000, // Color of the triangle
+        $triangle-direction: top // Orientation of the triangle; can be top, right, bottom, or left
+        );
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: rem-calc(-10) auto;
+        @include breakpoint (medium) {
+            @include css-triangle( $triangle-size: 40px, // Size of the triangle
+            $triangle-color: #000, // Color of the triangle
+            $triangle-direction: top // Orientation of the triangle; can be top, right, bottom, or left
+            );
+        }
+    }
+}

@@ -1,0 +1,140 @@
+.supportLanding {} 
+
+.supportLanding .content__h4{
+    padding: rem-calc(16);
+} 
+
+.supportLanding .content__h2{
+    padding-bottom: rem-calc(0);
+    @include breakpoint(medium) {
+        padding-bottom: rem-calc(16);
+    }
+    @include breakpoint(large) {
+        padding-bottom: rem-calc(16);
+    }
+}
+
+.content__thirds--SupportButtons{
+    @include grid-content(12);
+    @include breakpoint(medium) {
+        @include grid-content(4);
+    }
+} 
+
+.supportLanding .content__thirds {
+    @include grid-content(12);
+    overflow: visible;
+        h2 {
+            padding-top: rem-calc(16);
+        }
+    @include breakpoint(medium) {
+        @include grid-content(6);
+        overflow: visible;
+    }
+    @include breakpoint(large) {
+        @include grid-content(4);
+        overflow: visible;
+    }
+} 
+
+.content__thirdsLast {
+    @include grid-content(12);
+        h2 {
+                padding-top: rem-calc(16);
+            }
+    @include breakpoint(medium) {
+        @include grid-content(12);
+    }
+    @include breakpoint(large) {
+        @include grid-content(4);
+    }
+}
+
+ 
+.grayBackground--account{
+    @include breakpoint(medium) {
+        padding-bottom: rem-calc(90)!important;
+    }
+    @include breakpoint(large) {
+        padding-bottom: rem-calc(97)!important;
+    }
+} 
+
+.grayBackground--shipping{
+    @include breakpoint(large) {
+        padding-bottom: rem-calc(138)!important;
+    }
+}
+
+.supportLanding .grayBackground{
+    padding: rem-calc(16) rem-calc(0);
+    border-radius: 5px;
+    
+} 
+
+.supportLanding ul{
+    list-style: none;
+    margin-bottom: rem-calc(7);
+}
+
+.supportLanding__buttonBottom {
+   border: 1px solid darkgray;
+}
+
+//SHIPPING PAGE
+.shipping .content__block--half{
+    padding: 0;
+    @include breakpoint(medium) {
+        padding: rem-calc(0) rem-calc(16);
+    }
+}
+
+.shipping__row {
+    @include grid-block(12);
+    @include grid-wrap(true);
+    border-bottom: 1px solid lightgray;
+    padding: rem-calc(6) rem-calc(0);
+    overflow: visible;
+    @include breakpoint(medium) {
+        padding: rem-calc(6) rem-calc(0);
+        overflow: visible;
+    }
+}
+
+.shipping__column {
+    @include grid-content(4);
+    overflow: visible;
+}
+
+.shipping__header {
+    font-size: rem-calc(14);
+	line-height: rem-calc(26);
+	margin-bottom: rem-calc(0);
+    text-transform: uppercase;
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	text-align:left;
+}
+
+.shipping__info {
+    font-size: rem-calc(14);
+	line-height: rem-calc(26);
+    margin-bottom: rem-calc(0);
+}
+
+.shipping .purpleBackground {
+    color: white;
+    @include breakpoint(medium) {
+        margin-top: rem-calc(10);
+        padding-bottom: rem-calc(50);
+        overflow: visible;
+    }
+}
+
+.shipping .content__thirds {
+    @include grid-content(12);
+    
+    @include breakpoint(medium) {
+	@include grid-content(4);
+    overflow: visible;
+    }
+}

@@ -1,0 +1,139 @@
+/*-----------------  footer section  -----------------*/
+
+.footer {
+	background: $secondary-color url("../img/background-footer.png") no-repeat center top;
+	background-size:rem-calc(400);
+	padding-top: rem-calc(70);
+	@include breakpoint(700){
+	background-size:rem-calc(600);
+	}
+}
+
+.logo__footer {
+	text-align: center;
+	padding: $global-padding;
+}
+
+
+/*GRID-BLOCK*/
+
+.footer__linkSection {
+	@include grid-block;
+	@include grid-wrap(true);
+	@include grid-orient(vertical);
+	text-align: center;
+	@include breakpoint(medium) {
+		@include grid-orient(horizontal);
+		text-align: left;
+	}
+}
+
+
+/*GRID-CONTENT*/
+
+.footer__linkColumn,
+.footer__linkColumn--center {
+	@include grid-content;
+}
+
+.footer__linkColumn--center {
+	text-align: center;
+}
+
+
+/*GRID-BLOCK*/
+
+.footer__copyrightBlock {
+	@include grid-block;
+}
+
+.footer__copyright {
+	text-transform: uppercase;
+	font-family: 'roboto_slablight';
+	color: #8d8c92;
+	font-size: rem-calc(12);
+}
+
+.footer__title {
+	font-family: 'robotoblack';
+	color: white;
+	& a {
+		color: white;
+		&:hover {
+			color: smartscale(white, 25%);
+		}
+	}
+}
+
+.lines:before {
+	@include breakpoint(medium) {
+		content: "";
+		background: $secondary-color url("../img/background-patterns/dark-purple-diagonal.png");
+		display: inline-block;
+		height: rem-calc(20);
+		width: 100%;
+	}
+}
+
+.footer__title--gray a {
+	color: #8d8c92;
+}
+
+.shop-store {
+	@include breakpoint(medium) {
+		&:before {
+			content: "\e62f ";
+			font-family: 'europa-sports';
+			padding-right: rem-calc(5);
+			font-size: rem-calc(24);
+		}
+	}
+}
+
+.shop-vendors {
+	@include breakpoint(medium) {
+		&:before {
+			content: "\e635 ";
+			font-family: 'europa-sports';
+			padding-right: rem-calc(5);
+			font-size: rem-calc(24);
+		}
+	}
+}
+
+.footer__link {
+	color: #8d8c92;
+	font-family: 'roboto_slablight', georgia, serif;
+	font-size: rem-calc(16);
+	display: none;
+	&:hover {
+		color: white;
+	}
+	@include breakpoint(medium) {
+		display: block;
+	}
+	@include breakpoint(large) {
+		display: block;
+	}
+}
+
+.footer__link--large {
+	font-family: 'robotoblack';
+	color: #8d8c92;
+}
+
+.footer__privacyPolicy {
+	padding-top: rem-calc(50);
+	font-family: 'robotobold';
+	font-size: rem-calc(14);
+	color: #8d8c92;
+	& a {
+		color: #8d8c92;
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+
+/*-----------------  end footer section  -----------------*/

@@ -1,0 +1,363 @@
+//*GLOBAL CLASSES WE CREATE*//
+
+//*Headings*//
+.sectionTitle {
+	font-family: 'robotoblack';
+	text-transform: uppercase;
+	font-size: rem-calc(60);
+	line-height: rem-calc(45);
+	@include grid-content;
+	padding-bottom: rem-calc(25);
+}
+
+.sectionTitle--white,
+.maintenance__title {
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	font-size: rem-calc(40);
+	line-height: rem-calc(45);
+	color: #fff;
+	padding-bottom: 0;
+	@include breakpoint(medium) {
+		font-size: rem-calc(60);
+	}
+}
+
+.sectionTitle--medium {
+	font-family: 'robotoblack';
+	text-transform: uppercase;
+	font-size: rem-calc(44);
+	line-height: rem-calc(40);
+	padding-bottom: rem-calc(25);
+	text-align: center;
+	@include breakpoint(large) {
+		text-align: left;
+	}
+}
+
+.sectionSubtitle {
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	color: #49415e;
+	margin-bottom: 3.125rem;
+	text-align: center;
+}
+
+.sectionSubtitle--lite {
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	font-size: rem-calc(36);
+	line-height: rem-calc(40);
+	color: #a597c7;
+	margin-bottom: rem-calc(30);
+	@include breakpoint(small) {
+		font-size: rem-calc(30);
+	}
+}
+
+.sectionTitle--small {
+	font-size: rem-calc(26);
+}
+
+//Setting all Links inside a paragraph to have underline
+p a {
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+//*STYLING FOR HEADER DROP DOWNS*//
+.panel {
+	background-color: #ebebeb;
+	//border-bottom:5px solid #000;
+	//&:after {
+	//	content: "";
+	//background: url("../img/header-left.png") repeat right bottom;
+	//display: block;
+	//width: 100%;
+	//height: 4px;
+	//}
+}
+
+//*Modal H1 global*//
+.modal__h1 {
+	font-family: 'robotoblack';
+	font-size: rem-calc(18);
+	text-transform: uppercase;
+	padding-bottom: rem-calc(8);
+	border-bottom: rem-calc(1) solid #c7c7c7;
+}
+
+//*Modal global*//
+.modal {
+	overflow: scroll !important;
+}
+
+//*MAYBE MOVE TO BASE*//
+//*UTILITY*//
+.clear {
+	clear: both;
+}
+
+.noscroll {
+	overflow: visible;
+}
+
+.disabled,
+a.disabled,
+input.disabled,
+select.disabled
+ {
+	opacity: .5;
+	cursor: default;
+	pointer-events: none;
+}
+
+//*ADDS ARROW BEFORE LINK*//
+
+
+.arrow{
+	text-decoration: none;
+&:before {
+	content: "\e607";
+	font-family: 'europa-sports';
+	speak: none;
+	font-size: rem-calc(12);
+	margin-right: rem-calc(5);
+}
+}
+
+.close-button {
+	z-index: 9999999;
+}
+
+.black {
+	color: $secondary-color;
+}
+
+//Used for captions unders images or any content
+.caption {
+	font-size: rem-calc(13);
+	color: #555;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+//*Actionsheet Create New*//
+.createNew {
+	background-color: rgba(0, 0, 0, .1);
+}
+
+.icon-added {
+	color: #027705;
+	font-size: rem-calc(16);
+}
+
+.added {
+	text-transform: uppercase;
+	color: #027705;
+	font-size: rem-calc(12);
+	margin-left: rem-calc(-5);
+}
+
+.noMargin {
+	margin-bottom: rem-calc(5);
+}
+
+/*No Results or No Items*/
+.noResults{
+	font-family:'robotoblack', Helvetica, Arial, san-serif;
+	font-size:rem-calc(20);
+	color:#000;
+}
+
+
+/*Expand button*/
+
+.content__expand {
+	color: $primary-color;
+	&:before {
+		content: "\e636";
+		font-family: 'europa-sports';
+		font-size: rem-calc(30);
+		position: absolute;
+	}
+	&.active {
+		&:before {
+			content: "\e611";
+			font-family: 'europa-sports';
+			font-size: rem-calc(30);
+			position: absolute;
+		}
+	}
+	&:hover {
+		color: #000;
+	}
+}
+
+
+/*Styling for bottom of the page links with active state*/
+
+.bottomLinks {
+	text-transform: uppercase;
+	text-align: center;
+	font: rem-calc(14)'robotoblack', Helvetica, Arial, san-serif;
+	color: $primary-color;
+	display: block;
+	margin-top: rem-calc(30);
+	margin-bottom: rem-calc(30);
+	@include breakpoint(600) {
+		margin-right: rem-calc(25);
+		font-size: rem-calc(18);
+	}
+	@include breakpoint(large) {
+		margin-right: rem-calc(30);
+		margin-top: rem-calc(0);
+		font-size: rem-calc(18);
+	}
+	& a {
+		&:before {
+			content: "\e607";
+			font-family: 'europa-sports';
+			speak: none;
+			font-size: rem-calc(12);
+			margin-right: rem-calc(5);
+			@include breakpoint(600) {
+				font-size: rem-calc(18);
+			}
+		}
+		&:after {
+			content: "|";
+			margin: 0 rem-calc(6);
+			color: $primary-color;
+			@include breakpoint(600) {
+				margin: 0 rem-calc(15);
+			}
+		}
+		&:nth-child(3):after {
+			content: " ";
+		}
+	}
+	& a.bottomLinks__active {
+		&:before {
+			content: "\e606";
+			font-family: 'europa-sports';
+			speak: none;
+			color: black;
+			font-size: rem-calc(12);
+			margin-right: rem-calc(5);
+			@include breakpoint(600) {
+				font-size: rem-calc(18);
+			}
+		}
+	}
+	.bottomLinks__active {
+		color: black;
+	}
+}
+
+////*Use this to embed responsive videos. See About Us page for html*////
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+}
+
+.embed-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+////*Form Fieldset*////
+
+fieldset{
+	padding:rem-calc(24);
+	border-color:#c7c7c7;
+
+	& legend{
+		font-family: 'robotoblack',helvetica, arial, san-serif;
+		font-size:rem-calc(20);
+	}
+}
+
+////*Preloader*////
+.euPreloader{
+	clear:both;
+	background-color: transparent;
+
+	& img.euPreloader__img{
+		margin:5% 0 5% 50%;
+		text-align: center;
+		width:rem-calc(32);
+	}
+}
+
+.euPreloader__block{
+	display:block;
+
+}
+
+////*Back To Link*////
+
+a.back{
+@include grid-content;
+	text-transform: uppercase;
+	font-family:'robotobold',helvetica, arial,sans-serif;
+	font-size:rem-calc(12);
+	margin-bottom:rem-calc(16);
+	overflow:visible;
+	&:before{
+		content:"\e608";
+		font-family:'europa-sports';
+		margin-right:rem-calc(4);
+	}
+
+}
+
+////*Bottom of the page navigation arrows*////
+
+.content__navigate{
+	@include grid-block(12);
+	clear:both;
+	overflow:visible;
+	margin-top:rem-calc(60);
+	padding: rem-calc(8) 0;
+	border-top:1px dotted #c7c7c7;
+	border-bottom:1px dotted #c7c7c7;
+	background-color: #f7f7f7;
+}
+
+.content__navigate--prev{
+	@include grid-content(2);
+	text-align: left;
+	overflow:visible;
+}
+
+.content__navigate--all{
+	@include grid-content(8);
+	text-align: center;
+	overflow:visible;
+}
+
+.content__navigate--next{
+	@include grid-content(2);
+	text-align: right;
+	overflow:visible;
+}
+
+.content__arrows{
+	font-size: rem-calc(40);
+	color:$secondary-color;
+
+	&:hover{
+		color:$primary-color;
+	}
+}

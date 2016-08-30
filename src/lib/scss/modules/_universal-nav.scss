@@ -1,0 +1,38 @@
+/////*UNIVERSAL NAVIGATION: LINKS TO EXTERNAL VERTICALS*/////
+.universalNav__container {
+	@include grid-container;
+	@include breakpoint(rem-calc(1000)) {}
+}
+
+.universalNav {
+	display: none;
+	@include breakpoint(rem-calc(1000)) {
+		background: $secondary-color url("../img/background-patterns/dark-purple-diagonal.png");
+		display: block;
+	}
+}
+
+.universalNav__item {
+	display: inline-block;
+	padding: 0 rem-calc(10);
+	margin-left: 0;
+	&.active {
+		background: #000;
+		& a {
+			color: #fff;
+		}
+	}
+	@include breakpoint(medium) {
+		padding: 0 rem-calc(20);
+	}
+}
+
+.universalNav__link {
+	font-size: rem-calc(12);
+	color: #aeadb1;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	&:hover {
+		color: #fff;
+	}
+}

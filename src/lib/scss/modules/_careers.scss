@@ -1,0 +1,130 @@
+.careers .content__half{
+overflow:visible;
+
+@include breakpoint(medium){
+	@include grid-content(12);
+	overflow:visible;
+}
+	@include breakpoint(750){
+		@include grid-content(6);
+		overflow:visible;
+	}
+}
+
+
+.careers__alpha{
+	@include grid-order(2);
+	overflow:visible;
+	@include breakpoint(750){
+		@include grid-order(1);
+		overflow:visible;
+	}
+}
+
+.careers-detail .careers__alpha {
+	@include grid-order(1);
+	overflow:visible;
+	@include breakpoint(750){
+		@include grid-order(1);
+		overflow:visible;
+	}
+}
+
+.careers__beta{
+@include grid-order(1);
+	overflow:visible;
+	@include breakpoint(750){
+		@include grid-order(2);
+		overflow:visible;
+	}
+}
+
+.careers-detail .careers__beta{
+	@include grid-order(2);
+	overflow:visible;
+	@include breakpoint(750){
+		@include grid-order(2);
+		overflow:visible;
+	}
+}
+
+
+.careers .content__h2{
+margin-top:rem-calc(30);
+	&:first-child{
+	margin-top:0;
+	}
+}
+.careers-apply .content__h2,
+.careers-detail .content__h2{
+	margin-top:0;
+}
+.careers__testimonial{
+	padding:rem-calc(16);
+	background-color:#f0f0f0;
+	margin-bottom:rem-calc(32);
+}
+
+.careers__employee{
+width: rem-calc(125);
+	-webkit-border-radius: 125px;
+	border-radius: 125px;
+	float:left;
+	margin-right:rem-calc(16);
+	margin-bottom:rem-calc(8);
+}
+
+.careers .columnSpan {
+	-webkit-columns: rem-calc(250) 2;
+	/* Chrome, Safari, Opera */
+	-moz-columns: rem-calc(250) 2;
+	/* Firefox */
+	columns: rem-calc(250) 2;
+	-webkit-column-gap: rem-calc(30);
+	/* Chrome, Safari, Opera */
+	-moz-column-gap: rem-calc(30);
+	/* Firefox */
+	column-gap: rem-calc(30);
+}
+.careers__block{
+	margin-bottom:rem-calc(0);
+overflow:visible;
+	@include breakpoint(750){
+		margin-bottom:rem-calc(32);
+		overflow:visible;
+	}
+
+}
+
+.careers .content__half.careers__pics{
+	
+display:none;
+	@include breakpoint(760){
+	display:block;
+	}
+}
+.careers__opportunities{
+margin-bottom:0;
+	& li{
+	margin-bottom:rem-calc(5);
+	}
+}
+.careers__link{
+	font-family: 'robotoblack',helvetica, arial, san-serif;
+	text-transform: uppercase;
+	line-height: rem-calc(24)
+}
+.careers__new{
+	margin-bottom:0;
+	color:#0468b5;
+	text-transform: uppercase;
+	font-size:rem-calc(11);
+	line-height: rem-calc(20);
+
+}
+.careers__specify{
+	margin-bottom: 0;
+	text-transform: uppercase;
+	font-family: 'robotobold',helvetica, arial, san-serif;
+	color:#555;
+}

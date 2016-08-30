@@ -1,0 +1,243 @@
+.programsCoolers {}
+
+//this is overwriting the .content__half class on the _page-content.scss page 
+.programsCoolers .content__half {
+	@include breakpoint(medium) {
+		@include grid-content(12);
+		overflow: visible;
+	}
+	@include breakpoint(900) {
+		@include grid-content(6);
+		padding: rem-calc(30);
+		overflow: visible;
+	}
+}
+
+.programsDatafeed__center,
+.programsWebfulfillment__center{
+    margin: rem-calc(30) auto  rem-calc(0) auto;
+    text-align: center;
+    overflow: visible;
+}
+
+.contentPage__boldStatement {
+    font-family: 'robotobold';
+    font-size: rem-calc(24);
+    margin-bottom: rem-calc(26);
+}
+
+.programsLinks a{
+	text-transform: uppercase;
+	font: rem-calc(14)'robotoblack', Helvetica, Arial, san-serif;
+	color: $primary-color;
+	display: block;
+	margin-top: rem-calc(10);
+	margin-bottom: rem-calc(10);
+	@include breakpoint(600) {
+		font-size: rem-calc(18);
+	}
+	@include breakpoint(large) {
+		margin-top: rem-calc(0);
+		font-size: rem-calc(18);
+	}
+    &:before {
+        content: "\e607";
+        font-family: 'europa-sports';
+        speak: none;
+        font-size: rem-calc(12);
+        margin-right: rem-calc(5);
+        @include breakpoint(600) {
+            font-size: rem-calc(18);
+        }
+    }
+}
+
+.programsLinks ul{
+        list-style: none;
+        margin-left:0;
+    }
+
+.programsDatafeed .icon-checked-circle {
+    font-size: rem-calc(26);
+    color: green;
+    @include breakpoint(600) {
+        font-size: rem-calc(30);
+    }
+}
+
+.content__h3--stat {
+	font-size: rem-calc(18);
+	line-height: rem-calc(26);
+	color: #40345e;
+	font-family: 'robotobold', helvetica, arial, sans-serif;
+    margin-bottom: 0;
+	@include breakpoint(medium) {
+		font-size: rem-calc(22);
+		line-height: rem-calc(30);
+	}
+	@include breakpoint(large) {
+		font-size: rem-calc(26);
+		line-height: rem-calc(29);
+	}
+}
+
+.programsDatafeed__statBlock,
+.programsWebfulfillment__statBlock {
+    @include grid-block(12);
+	@include grid-wrap(true);
+    overflow: visible;
+}
+
+.programsDatafeed__statContent {
+    @include grid-content(6);
+	@include grid-wrap(true);
+    overflow: visible;
+    padding: rem-calc(30);
+}
+
+.programsDatafeed__summary,
+.programsWebFulfillment__summary,
+.programsWebfulfillment__whatItLooksLike{
+    position: relative;
+    &::after {
+        @include css-triangle( $triangle-size: 25px, 
+        $triangle-color: white, 
+        $triangle-direction: top 
+        );
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -50px;
+        margin: 0 auto;
+        z-index: 999999999999;
+        @include breakpoint (medium) {
+            bottom: -80px;
+            @include css-triangle( $triangle-size: 40px, 
+            $triangle-color: white, 
+            $triangle-direction: top 
+            );
+        }
+    }
+}
+
+.bottomTriangle--whatsOffered {
+    position: relative;
+    &::after {
+        @include css-triangle( $triangle-size: 25px, 
+        $triangle-color: #f5f5f5, 
+        $triangle-direction: top 
+        );
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -50px;
+        margin: 0 auto;
+        z-index: 999999999999;
+        @include breakpoint (medium) {
+            bottom: -80px;
+            @include css-triangle( $triangle-size: 40px, 
+            $triangle-color: #f5f5f5, 
+            $triangle-direction: top 
+            );
+        }
+    }
+}
+
+.programsDatafeed__requirements,
+.programsWebfulfillment__howItWorks {
+    background-color: #e6e5e8;
+    position: relative;
+    &::after {
+        @include css-triangle( $triangle-size: 25px, 
+        $triangle-color: #e6e5eb, 
+        $triangle-direction: top 
+        );
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -50px;
+        margin: 0 auto;
+        z-index: 999999999999;
+        @include breakpoint (medium) {
+            bottom: -80px;
+            @include css-triangle( $triangle-size: 40px, 
+            $triangle-color: #e6e5eb, 
+            $triangle-direction: top 
+            );
+        }
+    }
+}
+
+.programsDatafeed__turnkey {
+    background-image: url("../img/turnkey-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.programsDatafeed__cost,
+.programsWebfulfillment__bulletPoints {
+    position: relative;
+    &::after {
+        @include css-triangle( $triangle-size: 25px, 
+        $triangle-color: #f5f5f5, 
+        $triangle-direction: top 
+        );
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -50px;
+        margin: 0 auto;
+        @include breakpoint (medium) {
+            bottom: -80px;
+            @include css-triangle( $triangle-size: 40px, 
+            $triangle-color: #f5f5f5, 
+            $triangle-direction: top 
+            );
+        }
+    }
+}
+
+.programsDatafeed__cost h3 {
+    margin-bottom: 0;
+}
+
+.smallText {
+    font-size: rem-calc(12);
+    line-height: rem-calc(17);
+}
+
+.programsDatafeed__moreInfo h5,
+.programsWebfulfillment__whatItLooksLike h5{
+    text-align: center;
+}
+
+.programsWebfulfillment__dotBorder {
+    border-style: dotted;
+    border-width: rem-calc(1) rem-calc(0) rem-calc(1) rem-calc(0);
+    border-color: gray;
+    padding-bottom: rem-calc(35);
+    margin-top:  rem-calc(30)
+}
+
+.programsDatafeedSignUp input[type=radio] {
+    margin-bottom: rem-calc(10);
+}
+
+.programsDatafeedSignUp input[type=submit] {
+    margin-top: rem-calc(10);
+}
+
+.programsDatafeedSignUp input[type=date]::before{
+    width:100%;
+    content:attr(placeholder);
+    background-color:#FFFFFF;
+    color: #a9a9a9;
+}
+
+.webDocLink a:after {
+    content: "";
+    margin: 0 rem-calc(6);
+    color: $primary-color;
+}
+		

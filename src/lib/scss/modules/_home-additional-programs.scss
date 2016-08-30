@@ -1,0 +1,65 @@
+/*-----------------  Additional programs section  -----------------*/
+
+.programsSection {}
+
+.programsSection__title--small {
+	font-family: 'robotoblack';
+	text-transform: uppercase;
+	a {
+		color: #49415e;
+	}
+}
+
+.programsSection__block {
+	@include grid-block;
+	@include grid-wrap(true);
+}
+
+.programsSection__content {
+	@include grid-content;
+	text-align: center;
+	& a.button {
+		margin-bottom: rem-calc(30);
+		/*        &:nth-child(3) {
+        margin-bottom: rem-calc(0);
+        }*/
+	}
+	@include breakpoint(small) {
+		@include grid-size(12);
+	}
+	@include breakpoint(rem-calc(1000)) {
+		@include grid-size(4);
+	}
+}
+
+.programsSection--text {
+	font-family: 'roboto_slablight';
+	font-size: rem-calc(15);
+	line-height:rem-calc(25);
+}
+
+.programsSection__card {
+	background-image: url("../img/background-patterns/diagonal-noise.png");
+	padding: rem-calc(30) rem-calc(20) rem-calc(50) rem-calc(20);
+	margin-bottom: rem-calc(-20);
+
+	margin-left:auto;
+	margin-right:auto;
+	@include breakpoint(700) {
+        width:70%;
+    }
+
+	@include breakpoint(rem-calc(1000)) {
+		min-height: rem-calc(280);
+		width:auto;
+	}
+	@include breakpoint(rem-calc(1200)) {
+		min-height: rem-calc(300);
+	}
+	@include breakpoint(rem-calc(1340)) {
+		min-height: rem-calc(250);
+	}
+}
+
+
+/*-----------------  end Additional programs section  -----------------*/

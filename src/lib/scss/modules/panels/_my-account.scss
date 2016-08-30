@@ -1,0 +1,71 @@
+/*-----------------  My Account Section  -----------------*/
+
+.myAccount__block {
+	padding: rem-calc(20) rem-calc(0) rem-calc(20) rem-calc(0);
+	@include grid-block;
+	@include grid-size(12);
+	background-color: white;
+	@include grid-orient(horizontal);
+	@include breakpoint(medium) {
+		@include grid-size(7);
+		@include grid-offset(3);
+	}
+	@include breakpoint(rem-calc(1000)) {
+		@include grid-size(5);
+		@include grid-offset(7);
+	}
+}
+
+.myAccount__content {
+	@include grid-content;
+	padding-left: rem-calc(24);
+	overflow: visible;
+	ul {
+		margin-left: 0;
+	}
+}
+
+.myAccount__headerContent {
+	@include grid-content;
+	padding-left: rem-calc(20);
+	@include grid-size(12);
+}
+
+.myAccount__header {
+	font-family: 'robotobold';
+	font-size: rem-calc(20);
+	text-transform: uppercase;
+}
+
+.myAccount__welcome--nav,
+.myAccount__name--nav {
+	font-size: rem-calc(11);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.myAccount__welcome--nav {
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	span {
+		font-family: 'roboto_slablight', georgia, serif;
+		color: black;
+	}
+}
+
+.myAccount__link {
+	font-family: 'robotobold';
+	text-transform: uppercase;
+	overflow: hidden;
+	color: $primary-color;
+	&:before {
+		content: "\e607";
+		font-family: 'europa-sports';
+	}
+}
+
+.myAccount__button {
+	margin: rem-calc(10) rem-calc(0) rem-calc(0) rem-calc(0);
+}
+
+
+/*-----------------  END My Account Section  -----------------*/

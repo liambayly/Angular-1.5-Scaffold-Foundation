@@ -1,0 +1,51 @@
+/*-----------------  shop by Category slide-in section  -----------------*/
+
+.shopCategorySection {
+	background-color: white;
+	overflow: hidden;
+	padding: rem-calc(40) rem-calc(0) rem-calc(40) rem-calc(0);
+	position: relative;
+	
+	& ul.columnSpan{
+		list-style:none;
+	}
+}
+
+.shopCategorySection__block {
+	@include grid-block;
+	margin-bottom: rem-calc(0);
+	@include breakpoint(medium) {
+		margin-bottom: rem-calc(25);
+	}
+
+}
+
+.shopCategorySection__content {
+	@include grid-content;
+
+}
+
+.shopCategorySection__sectionTitle {
+	font-family: 'robotoblack';
+	text-transform: uppercase;
+	font-size: rem-calc(28);
+	line-height: rem-calc(36);
+	padding-bottom: rem-calc(0);
+	text-align: center;
+	@include breakpoint(medium) {
+		font-size: rem-calc(32);
+		text-align: left;
+		padding-bottom: rem-calc(25);
+	}
+}
+
+.shopCategorySection__content h1 {
+	padding-bottom: rem-calc(0);
+}
+
+.shopCategorySection__list {
+	@include grid-block;
+}
+
+
+/*-----------------  end shop by Category slide-in section  -----------------*/

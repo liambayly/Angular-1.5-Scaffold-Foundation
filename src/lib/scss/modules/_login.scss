@@ -1,0 +1,20 @@
+.login{
+    width:98%;
+	margin:0 auto;
+	border: 1px solid #dcdcdc;
+	padding:1em;
+	background-color:#f4f4f4;
+	
+	//Grid For Medium Screen
+	@include breakpoint(medium) {
+		width:50%;
+	}
+	
+}
+
+.login--credentials{
+	margin-bottom:1em;
+		background: #fff url('../img/background-footer.png');
+	    padding:1em;
+	    color:white;
+	}

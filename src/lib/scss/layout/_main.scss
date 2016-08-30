@@ -1,0 +1,35 @@
+main {
+	position: relative;
+}
+
+
+
+/*-----------------  employee slide-in section  -----------------
+
+.employeeSlideOut__block {
+	@include grid-block;
+	@include grid-align(right);
+}
+.employeeSlideOut__infoContent {
+	@include grid-content;
+	@include grid-size(expand);
+	background-color: white;
+	padding: rem-calc(15) rem-calc(35) rem-calc(15) rem-calc(25);
+	@include breakpoint(medium) {
+		@include grid-size(shrink);
+	}
+}
+.employeeSlideOut__header,
+.employeeSlideOut__name {
+	font-family: 'robotobold', helvetica, arial, sans-serif;
+	;
+	text-transform: uppercase;
+}
+.employeeSlideOut__header {
+	font-size: rem-calc(24);
+}
+.employeeSlideOut__name {
+	font-size: rem-calc(16);
+	padding-bottom: rem-calc(12);
+}
+/*-----------------  end employee slide-in section  -----------------*/

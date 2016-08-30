@@ -1,0 +1,112 @@
+/*PAGINATION FOR STORE*/
+
+.store .breadcrumbs {
+	@include grid-content;
+	font-family: 'robotoregular', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	margin-bottom: rem-calc(3);
+	list-style: none;
+	margin-left: 0;
+	display: block;
+	text-align: left;
+	& li {
+		display: inline-block;
+	}
+}
+
+.store .breadcrumbs > * {
+	color: #757575;
+	font-size: rem-calc(11);
+	line-height: rem-calc(14);
+}
+
+.store .breadcrumbs > *:hover a,
+.store .breadcrumbs > *:focus a {
+	text-decoration: underline;
+}
+
+.store .breadcrumbs > * a {
+	color: $primary-color;
+}
+
+.store .breadcrumbs > *.breadcrumbs--current {
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	color: #999;
+	cursor: default;
+}
+
+.store .breadcrumbs > *.breadcrumbs--current a {
+	color: #999;
+	cursor: default;
+}
+
+.store .breadcrumbs > *.breadcrumbs--current:hover,
+.store .breadcrumbs > *.breadcrumbs--current:hover a,
+.store .breadcrumbs > *.breadcrumbs--current:focus,
+.store .breadcrumbs > *.breadcrumbs--current:focus a {
+	text-decoration: none;
+}
+
+.store .breadcrumbs > *.breadcrumbs--unavailable {
+	color: #999999;
+}
+
+.store .breadcrumbs > *.breadcrumbs--unavailable a {
+	color: #999999;
+}
+
+.store .breadcrumbs > *.breadcrumbs--unavailable:hover,
+.store .breadcrumbs > *.breadcrumbs--unavailable:hover a,
+.store .breadcrumbs > *.breadcrumbs--unavailable:focus,
+.store .breadcrumbs > *.breadcrumbs--unavailable a:focus {
+	color: #999999;
+	cursor: not-allowed;
+	text-decoration: none;
+}
+
+.store .breadcrumbs > *:before {
+	color: #AAAAAA;
+	content: "/";
+	margin: 0 0.50rem;
+	position: relative;
+	top: 0;
+}
+
+.store .breadcrumbs > *:first-child:before,
+.store .breadcrumbs > *:nth-child(2):before {
+	content: " ";
+}
+
+.store .breadcrumbs > *:first-child:before {
+	margin: 0;
+}
+
+.store .breadcrumbs > *:nth-child(2):before {
+	margin: 0 0.25rem;
+}
+
+
+/*PAGINATION FOR CONTENT PAGES*/
+
+.breadcrumbs {
+	list-style: none;
+	display: block;
+	text-align: center;
+}
+
+
+.breadcrumbs .pageCrumb:after {
+	color: $primary-color;
+	content: "»";
+	margin: 0 rem-calc(8) 0 rem-calc(8);
+	position: relative;
+	top: 0;
+}
+
+.breadcrumbs__h2{
+	display:inline-block;
+}
+
+.breadcrumbs__h1{
+	display:block;
+}

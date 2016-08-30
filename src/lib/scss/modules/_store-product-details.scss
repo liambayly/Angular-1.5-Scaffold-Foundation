@@ -1,0 +1,330 @@
+.productDetails__titleContent {
+	@include grid-content;
+	margin-bottom: rem-calc(30);
+	overflow: visible;
+}
+
+.productDetails__h2,
+.productDetails__h3 {
+	text-transform: uppercase;
+	overflow: visible;
+}
+
+.productDetails__h3 {
+	font-family: 'robotoregular', helvetica, arial, sans-serif;
+	font-size: rem-calc(16);
+	line-height: rem-calc(18);
+	color: $primary-color;
+	margin-bottom:0;
+	margin-top:rem-calc(22);
+	@include breakpoint (large) {}
+}
+
+.productDetails__h2 {
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	font-size: rem-calc(28);
+	line-height: rem-calc(30);
+	@include breakpoint (large) {
+		font-size: rem-calc(36);
+		line-height: rem-calc(30);
+	}
+}
+
+
+/*.productDetails__product-image {
+    @include grid-content(12);
+    overflow:visible;
+    
+    @include breakpoint(medium) {
+    @include grid-content(4);
+    overflow:visible;
+    }
+}
+
+.productDetails__ordering {
+    @include grid-block(12);
+    @include grid-orient(vertical);
+    padding-top: rem-calc(25);
+    overflow:visible;
+    
+    @include breakpoint(medium) {
+    @include grid-block(8);
+    @include grid-orient(horizontal);
+    }
+}
+*/
+
+.productDetails__orderingWrap {
+	@include breakpoint(1000) {
+		width: 100%;
+		//float:left;
+	}
+}
+
+.productDetails__ordering-dropdown {
+	@include grid-content;
+	width: 100%;
+}
+
+.product__detail-compare {
+	padding-top: rem-calc(20);
+	display: none;
+	@include breakpoint (large) {
+		display: block;
+		width: 100%;
+		& input[type=checkbox]+label {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		& form {
+			margin: 0 auto;
+			text-align: center;
+		}
+		& label {
+			font-family: 'robotoregular', helvetica, arial, sans-serif;
+			font-size: rem-calc(13);
+			line-height: rem-calc(20);
+			text-transform: uppercase;
+		}
+	}
+}
+
+.productDetails__specify {
+	font-family: 'robotoregular', helvetica, arial, sans-serif;
+	font-size: rem-calc(12);
+	text-transform: uppercase;
+	line-height: rem-calc(16);
+	margin-bottom: rem-calc(5);
+	color: #757575;
+	margin-top: rem-calc(8);
+}
+
+.productDetails__specification{
+	@include grid-content;
+	margin-bottom:rem-calc(8);
+	& p{
+		
+		font-family: 'robotoregular', helvetica, arial, sans-serif;
+		margin-bottom: rem-calc(0);
+	}
+	& span{
+		font-family: 'robotoblack', helvetica, arial, sans-serif;
+	
+	}
+}
+
+.productDetails__select {
+	line-height: rem-calc(20);
+}
+
+.productDetails__price {
+	@include grid-content;
+	@include clearfix;
+	clear: both;
+	width: 100%;
+	@include breakpoint (medium) {
+		width: 100%;
+	}
+	@include breakpoint (760) {
+		clear: none;
+	}
+	@include breakpoint (1000) {
+		//float:left;
+	}
+	& .product__otherPrice {
+		float:left;
+		width: 33.33%;
+		display:inline-block;
+		margin-right:0;
+		margin-left:0;
+		padding:0;
+		text-align: center;
+		margin-bottom: rem-calc(10);
+	}
+	
+	& .product__specify{
+		margin-top:rem-calc(10);
+	
+	}
+	
+	& .product__otherAmount{
+		font-size: rem-calc(16);
+		margin-bottom:rem-calc(10);
+		@include breakpoint (760) {
+		font-size:rem-calc(16);
+		line-height:rem-calc(16); 
+		}
+	}
+	
+	& .product__yourPrice{
+	@include breakpoint (large) {
+		margin-top:rem-calc(12
+		
+		);
+	}
+	}
+}
+
+.productDetails__actions {
+	@include grid-content;
+	margin-top: rem-calc(16);
+	width: 100%;
+	@include breakpoint (medium) {}
+	@include breakpoint (760) {}
+	@include breakpoint (1000) {
+		//float:left;
+	}
+	@include clearfix;
+	& .button {
+		margin-top: rem-calc(0);
+	}
+}
+
+.productDetails__qty {
+	width: 25%;
+	float: left;
+	@include breakpoint (1200) {
+		width: 30%;
+	}
+	text-align: center;
+	& label {
+		display: none;
+		@include breakpoint (760) {
+			display: inline-block;
+			font-family: 'robotoregular', helvetica, arial, sans-serif;
+			font-size: rem-calc(11);
+			text-transform: uppercase;
+			line-height: rem-calc(11);
+			margin-bottom: rem-calc(3);
+			margin-top: rem-calc(0);
+			color: #757575;
+		}
+	}
+	& input {
+		width: 100%;
+		height: rem-calc(50);
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+}
+
+.productDetails__cta {
+	width: 70%;
+	float: right;
+	@include breakpoint (1200) {
+		width: 70%;
+		padding-left: rem-calc(30);
+	}
+	& .button {
+		width: 100%;
+	}
+}
+
+.productDetails__details,
+.productDetails__directions,
+.productDetails__warnings {
+	@include grid-content;
+	margin: rem-calc(30) rem-calc(0) rem-calc(0) rem-calc(0);
+}
+
+.productDetails__details {
+	clear: both;
+}
+
+.productDetails_detailsH4 {
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	font-size: rem-calc(20);
+	line-height: rem-calc(20);
+	text-transform: uppercase;
+	color:#252525;
+}
+
+.productDetails__addWishlist {
+	text-transform: uppercase;
+	font-size: rem-calc(15);
+	display: inline-block;
+	margin-left: rem-calc(0);
+	margin-top: rem-calc(5);
+	float:right;
+	&:before {
+		content: "\e60a";
+		font-family: 'europa-sports';
+		font-size: rem-calc(15);
+		margin-right: rem-calc(4);
+	}
+}
+
+.productDetails__zoom{
+	
+text-transform: uppercase;
+	font-size:rem-calc(12);
+	color:#252525;
+	&:hover{
+	color:$primary-color;
+	}
+	& .icon{
+		
+font-size:rem-calc(21);
+	display:block;
+	margin-bottom: rem-calc(5);
+		margin-top:rem-calc(10);
+	}
+}
+
+.productDetails__product-image,
+.productDetails__nutritionFacts {
+	padding: 0 rem-calc(16);
+	margin-bottom: rem-calc(16);
+}
+
+.productDetails__product-image {
+	text-align: center;
+	width: 60%;
+	margin-right: auto;
+	margin-left: auto;
+	@include breakpoint(500) {
+		width: 40%;
+	}
+	@include breakpoint(medium) {
+		float: left;
+	}
+	@include breakpoint(1000) {
+		width: 30%;
+	}
+}
+
+.productDetails__ordering {
+	@include breakpoint(medium) {
+		width: 60%;
+		float: right;
+	}
+	@include breakpoint(1000) {
+		float: left;
+		width: 45%;
+	}
+}
+
+.productDetails__details {
+	@include breakpoint(medium) {
+		width: 60%;
+		float: right;
+	}
+	@include breakpoint(1000) {
+		width: 72%;
+		float: left;
+	}
+}
+
+.productDetails__nutritionFacts {
+	float: left;
+	width: 100%;
+	@include breakpoint(medium) {
+	width: 40%;
+	}
+	
+	@include breakpoint(1000) {
+		float: none;
+		width: auto;
+	}
+}

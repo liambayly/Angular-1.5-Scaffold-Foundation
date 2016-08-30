@@ -1,0 +1,32 @@
+.productGrid {
+	/*GRID STRUCTURE*/
+	@include grid-block( $wrap: true,$size:12);
+}
+
+.productGrid__card {
+	@include grid-content(12);
+	
+	//Grid For Medium Screen
+	@include breakpoint(medium) {
+		@include grid-size(6);
+	}
+	//Grid For Large Screen
+	@include breakpoint(large) {
+		@include grid-size(3);
+	}
+	
+	margin-bottom: 2em;
+}
+
+.productGrid--thumbnail {
+	padding: 0.5rem;
+}
+
+.productGrid--h4 {
+	font: 1.2em/1em "robotoblack", Helvetica, Arial, san-serif;
+	text-transform: uppercase;
+}
+
+.productGrid--h6 {
+	font: .9em/1.3em "roboto_slablight", Georgia, Times, serif;
+}

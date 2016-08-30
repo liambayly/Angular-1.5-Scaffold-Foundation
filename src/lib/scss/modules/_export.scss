@@ -1,0 +1,95 @@
+.export {
+
+}
+
+
+.export__content {
+    @include grid-content;
+
+}
+
+.export__contentNoPadLeft {
+    @include grid-content(12);
+    padding-left: 0;
+
+}
+
+.export__blockLeft {
+    @include grid-block(12);
+    @include grid-wrap(true);
+    padding-left: 0;
+    padding-right: 0;
+    overflow: visible;
+
+    @include breakpoint (1000){
+        @include grid-block(6);
+        @include grid-wrap(true);
+        padding-left: 0;
+        overflow: visible;
+
+    }
+}
+
+.export__blockRight {
+
+    background-color: $primary-color;
+
+    padding:rem-calc(30);
+
+
+    p, li {
+        font-family: 'robotoregular';
+        color: white;
+    }
+
+}
+
+
+.export__salesBlock {
+    @include grid-block;
+	@include grid-align(center);
+    overflow: visible;
+
+    @include breakpoint (medium){
+@include grid-align(left);
+    }
+}
+
+.export__sales {
+    @include grid-content(6);
+    @include grid-size(shrink);
+    overflow: visible;
+}
+
+.export__salesInfo {
+    text-align: center;
+    padding-top: rem-calc(15);
+    font-size: rem-calc(16);
+    line-height: rem-calc(20);
+	margin-bottom:0;
+}
+
+.export__salesTitle{
+	margin-bottom:0;
+	text-transform: uppercase;
+	font-size:rem-calc(11);
+	text-align: center;
+}
+
+.export__salesPhone,
+.export__salesEmail{
+	margin-bottom:0;
+	text-align: center;
+}
+
+.export__salesEmail{
+	display:block;
+}
+
+.export__list{
+	& li{
+	margin-bottom:rem-calc(12);
+	font-size: rem-calc(16);
+		line-height: rem-calc(24);
+	}
+}

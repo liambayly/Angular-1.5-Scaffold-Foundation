@@ -1,0 +1,101 @@
+
+.print .content__thirds{
+width:100%;
+	padding-top:rem-calc(4);
+	padding-bottom:rem-calc(4);
+	@include breakpoint(640){
+	width:33.3333%;
+	}
+}
+.print p{
+	margin-bottom:0;
+	font-size:rem-calc(14);
+	line-height:rem-calc(22);
+	word-wrap: break-word;
+}
+.print__date,
+.print__name,
+.print__name--lg{
+	font-family: 'robotoblack', helvetica, arial,sans-serif;
+	text-transform: uppercase;
+	font-size:rem-calc(14);
+	margin-bottom:0;
+	& span{
+		font-family: 'robotoregular',helvetica,arial,sans-serif;
+	}
+	
+}
+p.print__name--lg{
+	font-size:rem-calc(18);
+}
+
+.print table{
+	width:100%;
+	 border-collapse: collapse;
+	& th,
+	& td{
+		text-align: left;
+		padding:16px;
+		border-bottom:1px solid #eee;
+	}
+	& th.print__sc{width:5%;}
+	& th.print__brand{width:30%;}
+	& th.print__product{width:40%;}
+	& th.print__price{width:10%;}
+	& th.print__qty{width:5%;}
+	& th.print__extPrice{width:10%;}
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 640px),
+(min-device-width: 648px) and (max-device-width: 650px)  {
+
+	/* Force table to not be like tables anymore */
+.print table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+ .print table thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+ .print table tr { border-top: 1px solid #ccc; }
+	
+ .print table td { 
+		/* Behave  like a "row" */
+		border: none;
+	 padding:8px;
+		position: relative;
+		padding-left: 40%; 
+	}
+	
+ .print table td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 8px;
+		left: 16px;
+		width: 
+			%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+ td:nth-of-type(1):before { content: "Stock Code"; }
+ td:nth-of-type(2):before { content: "Brand"; }
+td:nth-of-type(3):before { content: "Product"; }
+ td:nth-of-type(4):before { content: "Price"; }
+ td:nth-of-type(5):before { content: "Qty"; }
+ td:nth-of-type(6):before { content: "Ext. Price"; }
+}

@@ -1,0 +1,43 @@
+
+.compareProducts {
+    
+}
+
+.compareProducts__outerBlock {
+    @include grid-block;
+    @include grid-orient(horizontal);
+    @include grid-wrap(true);
+    @include grid-align(center);
+    padding: rem-calc(40) rem-calc(0);
+    overflow: visible;
+}
+
+.compareProducts__productBlockVertical {
+    @include grid-content;
+    overflow: visible;
+    max-width: rem-calc(400);
+    min-width: rem-calc(300);
+}
+
+.compareProducts__price {
+    float:left;
+    width: 100%;
+    clear: none;
+    
+}
+
+.compareProducts__productImage {
+    max-width: rem-calc(500);
+    margin: 0 auto;
+}
+
+.compareProducts__pricingBlock {
+    @include grid-block;
+    padding-bottom: rem-calc(20);
+}
+
+.compareProducts__sizeFlavor {
+    margin-bottom: rem-calc(20);
+    overflow: visible;
+    width: 100%;
+}

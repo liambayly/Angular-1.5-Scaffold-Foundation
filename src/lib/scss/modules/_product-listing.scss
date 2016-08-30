@@ -1,0 +1,32 @@
+////*Product Info Global Module*////
+
+
+
+/*Standard Product View Styling*/
+.product__image {
+	width: rem-calc(110);
+	margin: 0 auto rem-calc(20);
+}
+.product__brand {
+	font-size: rem-calc(13);
+	text-transform: uppercase;
+	line-height: rem-calc(14);
+	margin-bottom: rem-calc(4);
+}
+.product__item {
+	font-size: rem-calc(18);
+	text-transform: uppercase;
+	font-family: 'robotoblack', helvetica, arial, sans-serif;
+	line-height: 1.1;
+	margin-bottom: .8rem;
+}
+.product__item--link {
+	color: #000;
+	&:hover {
+		color: $primary-color;
+	}
+}
+.product__highlights {
+	font-family: 'roboto_slablight', georgia, serif;
+	margin-bottom: rem-calc(0);
+}

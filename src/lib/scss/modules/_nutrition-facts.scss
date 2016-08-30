@@ -1,0 +1,155 @@
+// NUTRITION FACTS //
+
+.nutritionFacts {
+    @include grid-block;
+    overflow: visible;
+    padding: rem-calc(5);
+}
+
+.nutritionFacts__outerFrame {
+    @include grid-block;
+    @include grid-orient(vertical);
+    @include grid-size(expand);
+    padding: rem-calc(5);
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    //max-width: rem-calc(300);
+    min-width: rem-calc(210);
+    overflow: visible;
+}
+
+h1.nutritionFacts__title {
+    font-family: 'robotoblack';
+    font-size: rem-calc(30);
+    line-height: rem-calc(28);
+    margin: rem-calc(0);
+}
+
+.nutritionFacts__servingSize, .nutritionFacts__servingsPerContainer {
+    font-family: 'robotoregular';
+    font-size: rem-calc(10);
+    line-height: rem-calc(12);
+    margin: rem-calc(0);
+}
+
+.nutritionFacts__servingsPerContainer {
+    padding-bottom: rem-calc(4);
+    border-bottom: 10px solid black;
+}
+
+.nutritionFacts__amountPerServing, .nutritionFacts__nutrientCalories, .nutritionFacts__nutrient--Bold {
+    font-family: 'robotoblack';
+    font-size: rem-calc(10);
+    line-height: rem-calc(12);
+    padding: rem-calc(5) 0;
+    overflow: visible;
+    border-bottom: 1px solid black;
+    margin: rem-calc(0);
+}
+
+.nutritionFacts__nutrientCalories {
+    font-size: rem-calc(12);
+    line-height: rem-calc(12);
+//    border-bottom: rem-calc(5) solid black;
+}
+
+.nutritionFacts__nutrientAmount {
+    font-family: 'robotoregular';
+    font-size: rem-calc(12);
+    line-height: rem-calc(12);
+}
+
+.nutritionFacts__nutrientCaloriesFat {
+    font-family: 'robotoregular';
+    float: right;
+}
+
+.nutritionFacts__dailyValueHeader {
+    font-family: 'robotoblack';
+    font-size: rem-calc(10);
+    line-height: rem-calc(12);
+    padding: rem-calc(7) rem-calc(0) rem-calc(2) rem-calc(0);
+    overflow: visible;
+    border-bottom: 1px solid black;
+    margin: rem-calc(0);
+    text-align: right;
+}
+
+.nutritionFacts__nutrient--Bold {
+    font-size: rem-calc(12);
+    line-height: rem-calc(12);
+    border-bottom: 1px solid black;
+}
+
+.nutritionFacts__nutrient, .nutritionFacts__vitamin {
+    font-size: rem-calc(12);
+    line-height: rem-calc(12);
+    border-bottom: 1px solid black;
+    padding: rem-calc(5) 0;
+    padding-left: rem-calc(10);
+}
+
+.nutritionFacts__vitamin {
+    margin-left: rem-calc(0);
+}
+
+/*.nutritionFacts__boldUnderline {
+    border-bottom: rem-calc(10) solid black;
+}*/
+
+.nutritionFacts__dailyValue {
+    font-family: 'robotoblack';
+    float: right;
+}
+
+.nutritionFacts__dailyValueVitamin {
+    font-family: 'robotoregular';
+    float: right;
+}
+
+.nutritionFacts__borders {
+    border-top: 10px solid black;
+    //border-bottom: rem-calc(10) solid black;
+    padding-bottom: rem-calc(-5);
+}
+
+.nutritionFacts__statement, .nutritionFacts__blendDetails, .nutritionFacts__ingredientsList {
+    font-family: 'robotoregular';
+    font-size: rem-calc(12);
+    line-height: rem-calc(15);
+    margin: rem-calc(8) rem-calc(0) rem-calc(8) rem-calc(0);
+    padding-bottom: rem-calc(8);
+}
+
+.nutritionFacts__ingredientsList {
+
+}
+
+.nutritionFacts__statement {
+    border-bottom: 5px solid black;
+}
+
+.nutritionFacts__ingredients {
+    font-family: 'robotoblack';
+    font-size: rem-calc(12);
+    line-height: rem-calc(10);
+    line-height: rem-calc(12);
+    padding: rem-calc(5) 0;
+    overflow: visible;
+    margin: rem-calc(0);
+}
+
+.proprietaryBlendPaddingTop {
+    padding-top: rem-calc(20);
+}
+
+.nutritionFacts__none{
+	padding:rem-calc(8);
+	font-size:rem-calc(14);
+	font-family: 'robotoblack', helvetica, arial, san-serif;
+}
+
+.modal .productDetails__nutritionFacts {
+    width: 100%!important;
+}

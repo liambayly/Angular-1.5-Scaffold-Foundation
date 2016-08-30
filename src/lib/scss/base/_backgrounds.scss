@@ -1,0 +1,110 @@
+/// Classes to use for block backgrounds
+
+
+.just-grunge-line{
+	@include breakpoint (medium){
+	background-image: url("../img/grunge-line.png");
+	background-repeat: no-repeat, repeat;
+	background-position: top center;
+	background-size:rem-calc(700);
+	}
+}
+
+.concrete {
+	background-image: url("../img/background-patterns/concrete-wall_@2X.png");
+	background-repeat: repeat;
+	background-size:rem-calc(300);
+	@include breakpoint (medium){
+		background-image: url("../img/grunge-line.png"),url("../img/background-patterns/concrete-wall_@2X.png");
+		background-repeat: no-repeat, repeat;
+		background-position: top center;
+		background-size:rem-calc(700), rem-calc(300);
+	}
+}
+
+.concrete-no-grunge-line {
+	background-image: url("../img/background-patterns/concrete-wall_@2X.png");
+	background-repeat: repeat;
+	background-size:rem-calc(300);
+}
+.concrete-home-hero {
+	//background-image: url("../img/background-patterns/concrete-wall_@2X.png");
+	//background-repeat: repeat;
+	//background-size:rem-calc(300);
+	background-color: #eae9ed;
+	@include breakpoint (medium){
+		background-image: //url("../img/grunge-line.png"),
+			url("../img/background_hero.png"),
+			url("../img/background_hero_grad.png")
+			//url("../img/background-patterns/concrete-wall_@2X.png")
+			;
+		background-repeat: //no-repeat,
+			no-repeat,
+			repeat-x
+			//repeat
+			;
+		background-position: //top center,
+			bottom right, bottom;
+		background-size:auto,
+			auto,
+			//rem-calc(300)
+			;
+	}
+}
+
+.stucco{
+	background-image: url("../img/background-patterns/stucco_@2X.png");
+	background-repeat: repeat;
+	background-size:rem-calc(400);
+
+	@include breakpoint (medium){
+		background-image: url("../img/grunge-line.png"),url("../img/background-patterns/stucco_@2X.png");
+		background-repeat: no-repeat, repeat;
+		background-position: top center;
+		background-size:rem-calc(700),rem-calc(400);
+	}
+}
+
+.dots{
+	background-image: url("../img/background-patterns/dots_@2X.png");
+	background-repeat: repeat;
+	background-size:rem-calc(8);
+	@include breakpoint (medium){
+		background-image: url("../img/grunge-line.png"),url("../img/background-patterns/dots_@2X.png");
+		background-repeat: no-repeat, repeat;
+		background-position: top center;
+		background-size:rem-calc(700),rem-calc(8);
+	}
+}
+
+.dots-no-grunge-line{
+	background-image: url("../img/background-patterns/dots_@2X.png");
+	background-repeat: repeat;
+	background-size:rem-calc(8);
+}
+
+.diagonal-noise{
+	background-image: url("../img/background-patterns/diagonal-noise.png");
+}
+
+.dark-diagonal{
+	background-image: url("../img/background-patterns/black_twill.png");
+
+}
+
+.lite-diagonal{
+	background-image: url("../img/background-patterns/white-diagonal.png");
+
+}
+
+.white-diagonal{
+    background-image: url("../img/background-patterns/white-diagonal_transparent.png");
+}
+.white-background-trans {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.black-background{background-color:$secondary-color;}
+.purple-background{background-color:$primary-color;}
+.grey-background{background-color: #e6e5e8;}
+.black-background{background-color: #000;}
